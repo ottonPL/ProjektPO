@@ -11,7 +11,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 
-
 public class BottomPanel extends JPanel {
 
 	//bottom
