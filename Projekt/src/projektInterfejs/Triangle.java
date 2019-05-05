@@ -21,8 +21,8 @@ public class Triangle  extends JComponent{
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawOval(100, 200, 300, 400);
-		
+		//g.drawOval(100, 200, 300, 400);
+		//g.drawPolygon(int[] xPoints, int[] yPoints, int zPoints)
 	}
 	
 }
