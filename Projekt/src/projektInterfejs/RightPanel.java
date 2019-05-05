@@ -49,16 +49,14 @@ public class RightPanel extends JPanel implements ActionListener{
 		v1.setLayout(new FlowLayout());
 			
 		nLabel= new JLabel("Refractive index n=");
-<<<<<<< HEAD
 		nTextField= new JTextField(" 1,5 ");
 		focalTextField= new JTextField(" 100 ");
 		focalTextField.addActionListener(this);
 		focalTextField.setActionCommand("focaltext");
 		
-=======
+
 		nTextField= new JTextField("1,5");
 		focalTextField= new JTextField("100");
->>>>>>> branch 'master' of https://github.com/ottonPL/ProjektPO.git
 		focalLabel= new JLabel("Focal lenght:");
 					
 		objectLabel1= new JLabel("object");
