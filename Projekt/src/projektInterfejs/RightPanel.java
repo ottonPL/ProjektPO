@@ -21,7 +21,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			private JPanel rightPanel;
 			private JLabel lensLabel;
 			private String[] lenses= {"converging", "diverging"};
-			private String[] lensShape= {"triangle", "square", "pentagon", "hexagon"};
+			private String[] lensShape= {"line", "triangle", "square", "pentagon", "hexagon"};
 			private JComboBox lensType;
 			private JLabel nLabel;
 			private JTextField nTextField;
@@ -50,8 +50,8 @@ public class RightPanel extends JPanel implements ActionListener{
 		v1.setLayout(new FlowLayout());
 			
 		nLabel= new JLabel("Refractive index n=");
-		nTextField= new JTextField(" 1,5 ");
-		focalTextField= new JTextField(" 100 ");
+		nTextField= new JTextField("1,5");
+		focalTextField= new JTextField("100");
 		focalLabel= new JLabel("Focal lenght:");
 					
 		objectLabel1= new JLabel("object");
@@ -127,7 +127,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			}
 			case "add": {
 				englishButton.setBackground(Color.CYAN);
-				trajangle();
+				//trajangle();
 				break;
 			}
 			case "polski": {
