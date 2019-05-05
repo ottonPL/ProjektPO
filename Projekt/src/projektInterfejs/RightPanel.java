@@ -230,7 +230,7 @@ public class RightPanel extends JPanel implements ActionListener{
 //	}
 	
 	
-	
+	// zrobilem do konca zmiane jezykow
 	//TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeEST
 	
 	
