@@ -43,5 +43,6 @@ public class DrawPanel extends JPanel{
         	repaint();
         }
 	}
+	
 	RightPanel rysowanie= new RightPanel();
 }
