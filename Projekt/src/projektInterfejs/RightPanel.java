@@ -32,7 +32,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			private JLabel language, objectLabel1, objectLabel2, focalLabel;
 			private JButton polskiButton, englishButton, saveButton, newButton;	
 			
-			public int rogi=2;
+			public int rogi=3;
 			
 	public RightPanel() {
 		
@@ -44,7 +44,6 @@ public class RightPanel extends JPanel implements ActionListener{
 		lensLabel= new JLabel("Lens");
 		lensType= new JComboBox(lenses); 
 		lensType.setSelectedIndex(0); //zaczyna od pierwszego stringa w tablicy 
-		//lensType.addActionListener(this);  <--- tak bylo na jakiejs stronie
 
 		JPanel v1= new JPanel();
 		v1.setLayout(new FlowLayout());
@@ -52,6 +51,9 @@ public class RightPanel extends JPanel implements ActionListener{
 		nLabel= new JLabel("Refractive index n=");
 		nTextField= new JTextField(" 1,5 ");
 		focalTextField= new JTextField(" 100 ");
+		focalTextField.addActionListener(this);
+		focalTextField.setActionCommand("focaltext");
+		
 		focalLabel= new JLabel("Focal lenght:");
 					
 		objectLabel1= new JLabel("object");
@@ -127,7 +129,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			}
 			case "add": {
 				englishButton.setBackground(Color.CYAN);
-				trajangle();
+				rogi=2;
 				break;
 			}
 			case "polski": {
@@ -156,14 +158,18 @@ public class RightPanel extends JPanel implements ActionListener{
 				nLabel.setText("Refractive index n=");
 				break;
 			}
+			case "focaltext":{
+				
+				break;
+			}
 		}
 			
 				
 	}	
-	public void trajangle() {
-		Triangle traj= new Triangle();
-		this.add(traj);
-	}
+//	public void trajangle() {
+//		Triangle traj= new Triangle();
+//		frame.add(traj);
+//	}
 	
 	
 	
