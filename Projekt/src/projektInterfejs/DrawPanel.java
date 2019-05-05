@@ -37,12 +37,12 @@ public class DrawPanel extends JPanel{
         g2.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+50, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)+100, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)+100, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)+50, ( (float) (height.getHeight())/2)+100));
         //rysuje krzywa po prawej stronie soczewki
         
-        if(penis.rogi==2) {
+        if(rysowanie.rogi==2) {
         	g2.drawOval(100, 200, 300, 400);
         	revalidate(); 
         	repaint();
         }
         
 	}
-	RightPanel penis= new RightPanel();
+	RightPanel rysowanie= new RightPanel();
 }
