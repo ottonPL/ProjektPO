@@ -27,14 +27,14 @@ public class DrawPanel extends JPanel{
         g2.draw(new Line2D.Float(0,(float) (height.getHeight())/2, (float) width.getWidth(),(float) (height.getHeight())/2));
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
         //repaint();
-        g2.draw(new Line2D.Float(( (float) (width.getWidth())/2)-50, ( (float) (height.getHeight())/2)-100, ( (float) (width.getWidth())/2)+50,  ( (float) (height.getHeight())/2)-100));
-        g2.draw(new Line2D.Float(( (float) (width.getWidth())/2)-50, ( (float) (height.getHeight())/2)+100, ( (float) (width.getWidth())/2)+50,  ( (float) (height.getHeight())/2)+100));
+        g2.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)-100));
+        g2.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)+100));
         //^^te w rysujo poziome linie soczewki
         
         
-        g2.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-50, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)-100, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)-100, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)-50, ( (float) (height.getHeight())/2)+100));
+        g2.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100));
         //^^rysuje krzywa po lewej stronie soczewki
-        g2.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+50, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)+100, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)+100, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)+50, ( (float) (height.getHeight())/2)+100));
+        g2.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)+100));
         //rysuje krzywa po prawej stronie soczewki
         
         if(rysowanie.rogi==2) {
