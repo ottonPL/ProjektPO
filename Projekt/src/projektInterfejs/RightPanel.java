@@ -26,12 +26,12 @@ public class RightPanel extends JPanel implements ActionListener{
 			private JLabel nLabel;
 			private JTextField nTextField;
 			private JComboBox objectType;
-			private JComboBox objectType2;
 			private JButton add;
 			private JTextField focalTextField;
 			private JLabel language, objectLabel1, objectLabel2, focalLabel;
 			private JButton polskiButton, englishButton, saveButton, newButton;	
 			
+			//public int zmienna=0;
 			public int rogi=3;
 			
 	public RightPanel() {
@@ -146,6 +146,33 @@ public class RightPanel extends JPanel implements ActionListener{
 				add.setText("Dodaj");
 				objectLabel1.setText("Objekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
+				
+				lenses[0]="skupiajaca";
+				lenses[1]="rozpraszajaca";
+				lensType.removeItemAt(1);
+				lensType.removeItemAt(0);
+				lensType.addItem(lenses[0]);
+				lensType.addItem(lenses[1]);
+				
+				lensShape[0]="linia";
+				lensShape[1]="trojkat";
+				lensShape[2]="kwadrat";
+				lensShape[3]="pieciokat";
+				lensShape[4]="szesciokat";
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[0]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[1]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[2]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[3]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[4]);
 				break;
 			}
 			case "english": {
@@ -159,8 +186,36 @@ public class RightPanel extends JPanel implements ActionListener{
 				add.setText("Add");
 				objectLabel1.setText("Object");
 				nLabel.setText("Refractive index n=");
+				
+				lenses[0]="converging";
+				lenses[1]="diverging";
+				lensType.removeItemAt(1);
+				lensType.removeItemAt(0);
+				lensType.addItem(lenses[0]);
+				lensType.addItem(lenses[1]);
+				
+				lensShape[0]="line";
+				lensShape[1]="triangle";
+				lensShape[2]="square";
+				lensShape[3]="pentagon";
+				lensShape[4]="hexagon";
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[0]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[1]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[2]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[3]);
+				
+				objectType.removeItemAt(0);
+				objectType.addItem(lensShape[4]);
 				break;
 			}
+			
 			case "focaltext":{
 				
 				break;
