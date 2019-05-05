@@ -32,7 +32,6 @@ public class RightPanel extends JPanel implements ActionListener{
 			private JLabel language, objectLabel1, objectLabel2, focalLabel;
 			private JButton polskiButton, englishButton, saveButton, newButton;	
 			
-			
 			public int rogi=2;
 			
 	public RightPanel() {

@@ -21,6 +21,7 @@ import javax.swing.JTextField;
 
 public class Frame extends JFrame {
 
+		
 		//bottom
 		private JPanel bottomPanel;
 		
@@ -30,13 +31,15 @@ public class Frame extends JFrame {
 		private int startValue=0;
 		private JLabel objectLabel;
 		
-		//menu
+		
 		private JMenuBar menuBar;
 		private JMenu menu;
 		private JMenuItem menuItemW;
 		private JMenuItem menuItemM;
 		private JMenuItem menuItemC;
-		private JMenuItem menuItemY;		
+		private JMenuItem menuItemY;
+		
+		
 		
 	public Frame() throws HeadlessException {
 		
