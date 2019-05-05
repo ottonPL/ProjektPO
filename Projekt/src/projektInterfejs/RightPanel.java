@@ -134,11 +134,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			}
 			case "add": {
 				englishButton.setBackground(Color.CYAN);
-<<<<<<< HEAD
 				rogi=2;
-=======
-				//trajangle();
->>>>>>> branch 'master' of https://github.com/ottonPL/ProjektPO.git
 				break;
 			}
 			case "polski": {
@@ -179,6 +175,10 @@ public class RightPanel extends JPanel implements ActionListener{
 //		Triangle traj= new Triangle();
 //		frame.add(traj);
 //	}
+	
+	
+	
+	//TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeEST
 	
 	
 	
