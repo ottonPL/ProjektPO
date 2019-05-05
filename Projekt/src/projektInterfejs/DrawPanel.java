@@ -39,7 +39,7 @@ public class DrawPanel extends JPanel{
         
         if(penis.rogi==2) {
         	g2.drawOval(100, 200, 300, 400);
-        	revalidate();
+        	revalidate(); 
         	repaint();
         }
         

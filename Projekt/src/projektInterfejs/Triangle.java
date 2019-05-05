@@ -23,7 +23,7 @@ public class Triangle  extends JComponent{
 		super.paintComponent(g);
 <<<<<<< HEAD
 		g.drawOval(400, 200, 300, 400);
-=======
+= ======
 		//g.drawOval(100, 200, 300, 400);
 		//g.drawPolygon(int[] xPoints, int[] yPoints, int zPoints)
 >>>>>>> branch 'master' of https://github.com/ottonPL/ProjektPO.git
