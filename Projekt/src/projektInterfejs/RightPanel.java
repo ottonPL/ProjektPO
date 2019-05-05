@@ -21,7 +21,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			private JPanel rightPanel;
 			private JLabel lensLabel;
 			private String[] lenses= {"converging", "diverging"};
-			private String[] lensShape= {"triangle", "square", "pentagon", "hexagon"};
+			private String[] lensShape= {"line", "triangle", "square", "pentagon", "hexagon"};
 			private JComboBox lensType;
 			private JLabel nLabel;
 			private JTextField nTextField;
@@ -49,11 +49,16 @@ public class RightPanel extends JPanel implements ActionListener{
 		v1.setLayout(new FlowLayout());
 			
 		nLabel= new JLabel("Refractive index n=");
+<<<<<<< HEAD
 		nTextField= new JTextField(" 1,5 ");
 		focalTextField= new JTextField(" 100 ");
 		focalTextField.addActionListener(this);
 		focalTextField.setActionCommand("focaltext");
 		
+=======
+		nTextField= new JTextField("1,5");
+		focalTextField= new JTextField("100");
+>>>>>>> branch 'master' of https://github.com/ottonPL/ProjektPO.git
 		focalLabel= new JLabel("Focal lenght:");
 					
 		objectLabel1= new JLabel("object");
@@ -129,7 +134,11 @@ public class RightPanel extends JPanel implements ActionListener{
 			}
 			case "add": {
 				englishButton.setBackground(Color.CYAN);
+<<<<<<< HEAD
 				rogi=2;
+=======
+				//trajangle();
+>>>>>>> branch 'master' of https://github.com/ottonPL/ProjektPO.git
 				break;
 			}
 			case "polski": {
