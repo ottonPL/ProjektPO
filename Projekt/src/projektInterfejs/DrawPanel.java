@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 public class DrawPanel extends JPanel{
 
-	public void paintComponent(Graphics g) {
+	public final void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(5));  //do rozmiaru
@@ -39,7 +39,6 @@ public class DrawPanel extends JPanel{
         
         if(rysowanie.rogi==2) {
         	g2.drawOval(100, 200, 300, 400);
-        	revalidate(); 
         	repaint();
         }
 	}

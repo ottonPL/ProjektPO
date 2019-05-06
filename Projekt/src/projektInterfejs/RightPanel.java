@@ -18,6 +18,8 @@ import javax.swing.JTextField;
 public class RightPanel extends JPanel implements ActionListener{
 
 	//right
+			DrawPanel cojarobie= new DrawPanel();
+	
 			private JPanel rightPanel;
 			private JLabel lensLabel;
 			private String[] lenses= {"converging", "diverging"};
@@ -116,8 +118,8 @@ public class RightPanel extends JPanel implements ActionListener{
 		switch(arg0.getActionCommand()) {
 			case "obtype": {
 				if(objectType.getSelectedIndex()==0) {
-						polskiButton.setBackground(Color.MAGENTA);
-						rogi=3;
+						//polskiButton.setBackground(Color.MAGENTA);
+						rogi=2;
 						break;
 				}else if(objectType.getSelectedIndex()==1) {
 					//costam
@@ -131,8 +133,10 @@ public class RightPanel extends JPanel implements ActionListener{
 				}
 			}
 			case "add": {
-				englishButton.setBackground(Color.CYAN);
+				//englishButton.setBackground(Color.CYAN);
 				rogi=2;
+				revalidate();
+//				cojarobie.paintComponent(Graphics g);
 				break;
 			}
 			case "polski": {
@@ -221,7 +225,6 @@ public class RightPanel extends JPanel implements ActionListener{
 				break;
 			}
 		}
-			
 				
 	}	
 //	public void trajangle() {
