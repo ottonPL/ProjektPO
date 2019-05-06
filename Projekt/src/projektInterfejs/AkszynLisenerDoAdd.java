@@ -7,6 +7,7 @@ import java.awt.FlowLayout;
 import java.awt.GraphicsConfiguration;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -57,7 +58,7 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 		private JTextField focalTextField;
 		private JLabel language, objectLabel1, objectLabel2, focalLabel;
 		private JButton polskiButton, englishButton, saveButton, newButton;	
-		public int rogi=1;
+		public int figura=1;
 		//end of right panel
 		
 	public AkszynLisenerDoAdd() throws HeadlessException {
@@ -159,6 +160,8 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				
 				saveButton= new JButton("save");
 				newButton= new JButton("new");
+				newButton.addActionListener(this);
+				newButton.setActionCommand("NEW");
 				v2.add(polskiButton);
 				v2.add(englishButton);
 				v2.add(saveButton);
@@ -187,37 +190,42 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 	}
 	public void actionPerformed(ActionEvent arg0) {
 		switch(arg0.getActionCommand()) {
+			case "NEW": {
+				drawpanel.repaint();
+			}
 			case "obtype": {
 				if(objectType.getSelectedIndex()==0) {
-					rogi=1;
+					figura=1;
 					break;
 				}else if(objectType.getSelectedIndex()==1) {
-					rogi=2;
+					figura=2;
 					break;
 				}else if(objectType.getSelectedIndex()==2) {
-					rogi=3;
+					figura=3;
 					break;
 				}else if(objectType.getSelectedIndex()==3) {
-					rogi=4;
+					figura=4;
 					break;
 				}else if(objectType.getSelectedIndex()==4) {
-					rogi=5;
+					figura=5;
 					break;
 				}
 			}
 			case "add": {
-				drawpanel.rysujSoczewkeSku(getGraphics());
-				if(rogi==1) {
-					drawpanel.clear();
-					drawpanel.rysujSoczewkeSku(getGraphics());
+				if(figura==1) {
+					drawpanel.rysujSoczewkeWypukla(getGraphics());
 					drawpanel.rysujLinie(getGraphics());
-				}else if(rogi==2) {
-					drawpanel.rysujTrajangle(getGraphics());
-				}else if(rogi==3) {
+				}else if(figura==2) {
+					drawpanel.rysujSoczewkeWypukla(getGraphics());
+					drawpanel.rysujTrojkat(getGraphics());
+				}else if(figura==3) {
+					drawpanel.rysujSoczewkeWypukla(getGraphics());
 					drawpanel.rysujKwadrat(getGraphics());
-				}else if(rogi==4) {
+				}else if(figura==4) {
+					drawpanel.rysujSoczewkeWypukla(getGraphics());
 					drawpanel.rysujPieciokat(getGraphics());
-				}else if(rogi==5) {
+				}else if(figura==5) {
+					drawpanel.rysujSoczewkeWypukla(getGraphics());
 					drawpanel.rysujSzesciokat(getGraphics());
 				}
 				break;
@@ -233,6 +241,12 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				add.setText("Dodaj");
 				objectLabel1.setText("Objekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
+				
+				menu.setText("KOLOR T£A");
+				menuItemM.setText("MAD¯ENTA");
+				menuItemC.setText("CYJAN");
+				menuItemY.setText("JELO£");
+				menuItemW.setText("£AJT");
 				
 				lenses[0]="skupiajaca";
 				lenses[1]="rozpraszajaca";
@@ -273,6 +287,12 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				add.setText("Add");
 				objectLabel1.setText("Object");
 				nLabel.setText("Refractive index n=");
+				
+				menu.setText("Background color");
+				menuItemM.setText("Magenta");
+				menuItemC.setText("Cyan");
+				menuItemY.setText("Yellow");
+				menuItemW.setText("White");
 				
 				lenses[0]="converging";
 				lenses[1]="diverging";
