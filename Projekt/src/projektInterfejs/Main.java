@@ -6,8 +6,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Frame frame = new Frame();
+		AkszynLisenerDoAdd frame = new AkszynLisenerDoAdd();
 		frame.setVisible(true);
-	}
-
+	    frame.setResizable(false);
+	    }
 }

@@ -136,7 +136,7 @@ public class RightPanel extends JPanel implements ActionListener{
 				//englishButton.setBackground(Color.CYAN);
 				rogi=2;
 				revalidate();
-				
+				repaint();
 				break;
 			}
 			case "polski": {
