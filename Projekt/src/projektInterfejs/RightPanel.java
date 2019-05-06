@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 public class RightPanel extends JPanel implements ActionListener{
 
 	//right
-			DrawPanel cojarobie= new DrawPanel();
+			//DrawPanel drawpanel= new DrawPanel();
 	
 			private JPanel rightPanel;
 			private JLabel lensLabel;
@@ -136,7 +136,7 @@ public class RightPanel extends JPanel implements ActionListener{
 				//englishButton.setBackground(Color.CYAN);
 				rogi=2;
 				revalidate();
-//				cojarobie.paintComponent(Graphics g);
+				
 				break;
 			}
 			case "polski": {

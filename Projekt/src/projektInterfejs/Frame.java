@@ -39,6 +39,7 @@ public class Frame extends JFrame {
 		private JMenuItem menuItemC;
 		private JMenuItem menuItemY;
 		
+		public DrawPanel drawpanel;
 		
 		
 	public Frame() throws HeadlessException {
@@ -54,7 +55,7 @@ public class Frame extends JFrame {
 		menuItemM= new JMenuItem("Magenta");
 		menuItemC= new JMenuItem("Cyan");
 		menuItemY= new JMenuItem("Yellow");
-		DrawPanel drawpanel= new DrawPanel();
+		drawpanel= new DrawPanel();
 		drawpanel.setBackground(Color.white);
 		
 		menuItemW.addActionListener(new ActionListener() {
