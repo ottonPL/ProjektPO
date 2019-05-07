@@ -105,83 +105,83 @@ public class Frame extends JFrame implements ActionListener {
 		this.setJMenuBar(menuBar);
 		////////////////////////////////////////////////////end of menu
 //////////////
-				//right
-				rightPanel= new JPanel();
-				rightPanel.setLayout(new GridLayout(8,1));  
-				rightPanel.setPreferredSize(new Dimension (this.getWidth()/5,this.getHeight()));
-				
-				lensLabel= new JLabel("Lens");
-				lensType= new JComboBox<String>(lenses); 
-				lensType.setSelectedIndex(0); //zaczyna od pierwszego stringa w tablicy 
-				lensType.addActionListener(this);
-				lensType.setActionCommand("lenstype");
+		//right
+		rightPanel= new JPanel();
+		rightPanel.setLayout(new GridLayout(8,1));  
+		rightPanel.setPreferredSize(new Dimension (this.getWidth()/5,this.getHeight()));
+		
+		lensLabel= new JLabel("Lens");
+		lensType= new JComboBox<String>(lenses); 
+		lensType.setSelectedIndex(0); //zaczyna od pierwszego stringa w tablicy 
+		lensType.addActionListener(this);
+		lensType.setActionCommand("lenstype");
 
-				JPanel v1= new JPanel();
-				v1.setLayout(new FlowLayout());
-					
-				nLabel= new JLabel("Refractive index n=");
-				nTextField= new JTextField("1,5");
-				nTextField.addActionListener(this);
-				nTextField.setActionCommand("nvalue");
+		JPanel v1= new JPanel();
+		v1.setLayout(new FlowLayout());
 				
-				focalTextField= new JTextField("100");
-				focalTextField.addActionListener(this);
-				focalTextField.setActionCommand("focalvalue");
+		nLabel= new JLabel("Refractive index n=");
+		nTextField= new JTextField("1,5");
+		nTextField.addActionListener(this);
+		nTextField.setActionCommand("nvalue");
 				
-				nTextField= new JTextField("1,5");
-				focalTextField= new JTextField("100");
-				focalLabel= new JLabel("Focal lenght:");
+		focalTextField= new JTextField("100");
+		focalTextField.addActionListener(this);
+		focalTextField.setActionCommand("focalvalue");
+				
+		nTextField= new JTextField("1,5");
+		focalTextField= new JTextField("100");
+		focalLabel= new JLabel("Focal lenght:");
 							
-				objectLabel1= new JLabel("object");
+		objectLabel1= new JLabel("object");
 						
-				objectType= new JComboBox<String>(lensShape);
-				objectType.setSelectedIndex(0);
-				objectType.addActionListener(this);
-				objectType.setActionCommand("obtype");
+		objectType= new JComboBox<String>(lensShape);
+		objectType.setSelectedIndex(0);
+		objectType.addActionListener(this);
+		objectType.setActionCommand("obtype");
 						
-				add= new JButton("Add");
-				add.addActionListener(this);
-				add.setActionCommand("add");
+		add= new JButton("Add");
+		add.addActionListener(this);
+		add.setActionCommand("add");
 
-				language= new JLabel("Language");						
+		language= new JLabel("Language");						
 							
-				JPanel v2= new JPanel();  //nowy panel, zeby guziki ladnie sie miescily
-				v2.setLayout(new GridLayout(2,2));
+		JPanel v2= new JPanel();  //nowy panel, zeby guziki ladnie sie miescily
+		v2.setLayout(new GridLayout(2,2));
 						
-				JPanel v3= new JPanel();
-				v3.setLayout(new GridLayout(3,1));
+		JPanel v3= new JPanel();
+		v3.setLayout(new GridLayout(3,1));
 						
-				polskiButton=new JButton("Polish");
-				polskiButton.addActionListener(this);
-				polskiButton.setActionCommand("polski");
+		polskiButton=new JButton("Polish");
+		polskiButton.addActionListener(this);
+		polskiButton.setActionCommand("polski");
+			
+		englishButton=new JButton("English");
+		englishButton.addActionListener(this);
+		englishButton.setActionCommand("english");
 				
-				englishButton=new JButton("English");
-				englishButton.addActionListener(this);
-				englishButton.setActionCommand("english");
-				
-				saveButton= new JButton("save");
-				newButton= new JButton("new");
-				newButton.addActionListener(this);
-				newButton.setActionCommand("NEW");
-				v2.add(polskiButton);
-				v2.add(englishButton);
-				v2.add(saveButton);
-				v2.add(newButton);
+		saveButton= new JButton("save");
+		newButton= new JButton("new");
+		newButton.addActionListener(this);
+		newButton.setActionCommand("NEW");
+		v2.add(polskiButton);
+		v2.add(englishButton);
+		v2.add(saveButton);
+		v2.add(newButton);
 						
-				rightPanel.add(lensLabel);
-				rightPanel.add(lensType);
-				v1.add(nLabel);
-				v1.add(nTextField);
-				//this.setSize(new Dimension(1000,200));
-				rightPanel.add(v1);
-				rightPanel.add(objectLabel1);
-				rightPanel.add(objectType);
-				v3.add(add);
-				v3.add(focalLabel);
-				v3.add(focalTextField);
-				rightPanel.add(v3);
-				rightPanel.add(language);
-				rightPanel.add(v2);
+		rightPanel.add(lensLabel);
+		rightPanel.add(lensType);
+		v1.add(nLabel);
+		v1.add(nTextField);
+		//this.setSize(new Dimension(1000,200));
+		rightPanel.add(v1);
+		rightPanel.add(objectLabel1);
+		rightPanel.add(objectType);
+		v3.add(add);
+		v3.add(focalLabel);
+		v3.add(focalTextField);
+		rightPanel.add(v3);
+		rightPanel.add(language);
+		rightPanel.add(v2);
 //////////////
 	    BottomPanel BPanel = new BottomPanel();
 
@@ -226,36 +226,46 @@ public class Frame extends JFrame implements ActionListener {
 					if(figura==1) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujLinie(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==2) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujTrojkat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==3) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujKwadrat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==4) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujPieciokat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==5) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujKolo(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}
 					break;
 				}else if (soczewka==2) {
 					if(figura==1) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujLinie(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==2) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujTrojkat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==3) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujKwadrat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==4) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujPieciokat(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==5) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujKolo(getGraphics());
+						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}
 					break;
 				}
@@ -304,6 +314,7 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
+				repaint();
 				break;
 			}
 			case "english": {
@@ -350,6 +361,7 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
+				repaint();
 				break;
 			}
 			

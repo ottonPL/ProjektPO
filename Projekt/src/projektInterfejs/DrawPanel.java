@@ -16,6 +16,7 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 ///////////(int) (height.getHeight()/3) tu chyba chcemy zrobiæ odleg³oœæ F; w sensie co tyle damy ogniska
 
@@ -30,6 +31,21 @@ public class DrawPanel extends JPanel{
         Dimension height= this.getSize();
         g2.draw(new Line2D.Float(0,(float) (height.getHeight())/2, (float) width.getWidth(),(float) (height.getHeight())/2));
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
+	}
+	
+	//////zaznacza odleglosc ogniskowych
+	public void rysujOgniskowe(Graphics g, JTextField tekst) {
+		Graphics2D g9= (Graphics2D) g;
+		g9.setStroke(new BasicStroke(5));  //do rozmiaru
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        String text = tekst.getText();  //pobiera tekst z jtextfield i zapisuje go w stringu
+        int wartosc = Integer.parseInt(text); //przypisuje zmiennej wartosc wartosc pobrana ze stringa text
+//        for(int i=0; i<height.getHeight()/wartosc; i++)  wchodzi na RightPanel, wiec zostawiam max 4 ogniskowe
+        for(int i=0; i<4; i++) {
+        	g9.draw(new Line2D.Float( (float) width.getWidth()/2-(wartosc*i), (float) (height.getHeight()/2)+80, (float) width.getWidth()/2-(wartosc*i), (float)(height.getHeight()/2)+40));
+        	g9.draw(new Line2D.Float( (float) width.getWidth()/2+(wartosc*i), (float) (height.getHeight()/2)+80, (float) width.getWidth()/2+(wartosc*i), (float)(height.getHeight()/2)+40));
+        }//ten for rysuje pionowe kreski- ogniskowe
 	}
 	
 	////// TO RYSUJE OBIEKT: LINIA
@@ -54,7 +70,7 @@ public class DrawPanel extends JPanel{
         tx.rotate(angle - Math.PI / 2d);
         g3.setTransform(tx);
         g3.fill(arrowHead);     
-        g3.drawLine(x, y, endX, endY);;
+        g3.drawLine(x, y+5, endX, endY+5);;
 	}
 	
 	//////TO RYSUJE OBIEKT: TRÓJK¥T
@@ -82,7 +98,7 @@ public class DrawPanel extends JPanel{
         g3.setStroke(new BasicStroke(5));  //do rozmiaru
 		Dimension width=getSize();   //pobiera rozmiar drawPanelu
         Dimension height= getSize();
-        g3.drawRect((int) (height.getHeight()/3),(int) (height.getHeight()/2.4), (int) (height.getHeight()/6), (int) (height.getHeight())/6);
+        g3.drawRect((int) (height.getHeight()/4),(int) (height.getHeight()/2.25), (int) (height.getHeight()/7), (int) (height.getHeight())/7);
     }
 	//////TO RYSUJE OBIEKT: PIÊCIOK¥T
 	public void rysujPieciokat(Graphics g) {
@@ -112,42 +128,42 @@ public class DrawPanel extends JPanel{
 
 		Dimension width=getSize();   //pobiera rozmiar drawPanelu
         Dimension height= getSize();
-        g3.drawOval(100, 100, 100, 100);
+        g3.drawOval((int) (width.getWidth()/2)-250, (int) (height.getHeight()/2)-20, 70, 70);
 	}
 	
 	//////TO RYSUJE OBIEKT: SOCZEWKA WYPUK£A	
 	public void rysujSoczewkeWypukla(Graphics g) {
 		Graphics2D g4 = (Graphics2D) g;
-        g4.setStroke(new BasicStroke(5));  //do rozmiaru
+        g4.setStroke(new BasicStroke(4));  //do rozmiaru
 
 		Dimension width=getSize();   //pobiera rozmiar drawPanelu
         Dimension height= getSize();
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
         //repaint();
-        g4.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)-100));
-        g4.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)+100));
+        g4.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-50, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)-50));
+        g4.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+150, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)+150));
         //^^te w rysujo poziome linie soczewki
-        g4.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100));
+        g4.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-50, ((float) (width.getWidth())/2)-45, (float) (height.getHeight())/2+50, ((float) (width.getWidth())/2)-45, (float) (height.getHeight())/2+50, ( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+150));
         //^^rysuje krzywa po lewej stronie soczewki
-        g4.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)+100));
+        g4.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)-50, ((float) (width.getWidth())/2)+45, (float) (height.getHeight())/2+50, ((float) (width.getWidth())/2)+45, (float) (height.getHeight())/2+50, ( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)+150));
         //rysuje krzywa po prawej stronie soczewki
 	}
 	
-	//////TO RYSUJE OBIEKT: SOCZEWKA WKLÊS£A	
+	//////TO RYSUJE OBIEKT: SOCZEWKA WKLÊS£A	                    vvvv  tu o zmienilem kilka wartosci, zeby krzywe byly w inna strone
 	public void rysujSoczewkeWklesla(Graphics g) {
 		Graphics2D g5 = (Graphics2D) g;
-		g5.setStroke(new BasicStroke(5));  //do rozmiaru
+		g5.setStroke(new BasicStroke(4));  //do grubosci kreski
 
 		Dimension width=getSize();   //pobiera rozmiar drawPanelu
 		Dimension height= getSize();
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
       //repaint();
-      g5.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)-100));
-      g5.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)+100));
+      g5.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-50, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)-50));
+      g5.draw(new Line2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+150, ( (float) (width.getWidth())/2)+25,  ( (float) (height.getHeight())/2)+150));
       //^^te w rysujo poziome linie soczewki
-      g5.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)-60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+100));
+      g5.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)-50, ((float) (width.getWidth())/2), (float) (height.getHeight())/2+50, ((float) (width.getWidth())/2), (float) (height.getHeight())/2+50, ( (float) (width.getWidth())/2)-25, ( (float) (height.getHeight())/2)+150));
       //^^rysuje krzywa po lewej stronie soczewki
-      g5.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)-100, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ((float) (width.getWidth())/2)+60, (float) (height.getHeight())/2, ( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)+100));
+      g5.draw(new CubicCurve2D.Float(( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)-50, ((float) (width.getWidth())/2), (float) (height.getHeight())/2+50, ((float) (width.getWidth())/2), (float) (height.getHeight())/2+50, ( (float) (width.getWidth())/2)+25, ( (float) (height.getHeight())/2)+150));
       //rysuje krzywa po prawej stronie soczewki
 	}
 
