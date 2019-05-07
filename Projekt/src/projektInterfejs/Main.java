@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		AkszynLisenerDoAdd frame = new AkszynLisenerDoAdd();
+		Frame frame = new Frame();
 		frame.setVisible(true);
 	    frame.setResizable(false);
 	    }

@@ -105,8 +105,8 @@ public class DrawPanel extends JPanel{
 		Shape sh = tr.createTransformedShape(path);
 		g2.draw(sh);
 	}
-	//////TO RYSUJE OBIEKT: SZEŒCIOK¥T
-	public void rysujSzesciokat(Graphics g) {
+	//////TO RYSUJE OBIEKT: KO£O
+	public void rysujKolo(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(5));  //do rozmiaru
 

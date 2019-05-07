@@ -10,6 +10,7 @@ import java.awt.HeadlessException;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -24,17 +25,6 @@ import javax.swing.JTextField;
 
 
 public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
-
-		
-		//bottom
-		private JPanel bottomPanel;
-		
-		private JSlider slider;
-		private int minValue= 0;
-		private int maxValue=100;
-		private int startValue=0;
-		private JLabel objectLabel;
-		
 		
 		private JMenuBar menuBar;
 		private JMenu menu;
@@ -49,16 +39,21 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 		private JPanel rightPanel;
 		private JLabel lensLabel;
 		private String[] lenses= {"converging", "diverging"};
-		private String[] lensShape= {"line", "triangle", "square", "pentagon", "hexagon"};
-		private JComboBox lensType;
+		private String[] lensShape= {"line", "triangle", "square", "pentagon", "oval"};
+		private JComboBox<String> lensType;
 		private JLabel nLabel;
 		private JTextField nTextField;
-		private JComboBox objectType;
+		private JComboBox<String> objectType;
 		private JButton add;
 		private JTextField focalTextField;
-		private JLabel language, objectLabel1, objectLabel2, focalLabel;
+		private JLabel language, objectLabel1, focalLabel;
 		private JButton polskiButton, englishButton, saveButton, newButton;	
 		public int figura=1;
+		public int soczewka=1;
+		public int focalval=100;
+		public int userinputf;
+		public double nval=1.5;
+		public double userinputn;
 		//end of right panel
 		
 	public AkszynLisenerDoAdd() throws HeadlessException {
@@ -114,18 +109,24 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				rightPanel= new JPanel();
 				rightPanel.setLayout(new GridLayout(8,1));  
 				rightPanel.setPreferredSize(new Dimension (this.getWidth()/5,this.getHeight()));
+				
 				lensLabel= new JLabel("Lens");
-				lensType= new JComboBox(lenses); 
+				lensType= new JComboBox<String>(lenses); 
 				lensType.setSelectedIndex(0); //zaczyna od pierwszego stringa w tablicy 
+				lensType.addActionListener(this);
+				lensType.setActionCommand("lenstype");
 
 				JPanel v1= new JPanel();
 				v1.setLayout(new FlowLayout());
 					
 				nLabel= new JLabel("Refractive index n=");
-				nTextField= new JTextField(" 1,5 ");
-				focalTextField= new JTextField(" 100 ");
+				nTextField= new JTextField("1,5");
+				nTextField.addActionListener(this);
+				nTextField.setActionCommand("nvalue");
+				
+				focalTextField= new JTextField("100");
 				focalTextField.addActionListener(this);
-				focalTextField.setActionCommand("focaltext");
+				focalTextField.setActionCommand("focalvalue");
 				
 				nTextField= new JTextField("1,5");
 				focalTextField= new JTextField("100");
@@ -133,7 +134,7 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 							
 				objectLabel1= new JLabel("object");
 						
-				objectType= new JComboBox(lensShape);
+				objectType= new JComboBox<String>(lensShape);
 				objectType.setSelectedIndex(0);
 				objectType.addActionListener(this);
 				objectType.setActionCommand("obtype");
@@ -211,24 +212,53 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 					break;
 				}
 			}
-			case "add": {
-				if(figura==1) {
-					drawpanel.rysujSoczewkeWypukla(getGraphics());
-					drawpanel.rysujLinie(getGraphics());
-				}else if(figura==2) {
-					drawpanel.rysujSoczewkeWypukla(getGraphics());
-					drawpanel.rysujTrojkat(getGraphics());
-				}else if(figura==3) {
-					drawpanel.rysujSoczewkeWypukla(getGraphics());
-					drawpanel.rysujKwadrat(getGraphics());
-				}else if(figura==4) {
-					drawpanel.rysujSoczewkeWypukla(getGraphics());
-					drawpanel.rysujPieciokat(getGraphics());
-				}else if(figura==5) {
-					drawpanel.rysujSoczewkeWypukla(getGraphics());
-					drawpanel.rysujSzesciokat(getGraphics());
+			case "lenstype":{
+				if(lensType.getSelectedIndex()==0) {
+					soczewka=1;
+					break;
+				}else if(lensType.getSelectedIndex()==1) {
+					soczewka=2;
+					break;
 				}
-				break;
+			}
+			case "add": {
+				if(soczewka==1) {
+					if(figura==1) {
+						drawpanel.rysujSoczewkeWypukla(getGraphics());
+						drawpanel.rysujLinie(getGraphics());
+					}else if(figura==2) {
+						drawpanel.rysujSoczewkeWypukla(getGraphics());
+						drawpanel.rysujTrojkat(getGraphics());
+					}else if(figura==3) {
+						drawpanel.rysujSoczewkeWypukla(getGraphics());
+						drawpanel.rysujKwadrat(getGraphics());
+					}else if(figura==4) {
+						drawpanel.rysujSoczewkeWypukla(getGraphics());
+						drawpanel.rysujPieciokat(getGraphics());
+					}else if(figura==5) {
+						drawpanel.rysujSoczewkeWypukla(getGraphics());
+						drawpanel.rysujKolo(getGraphics());
+					}
+					break;
+				}else if (soczewka==2) {
+					if(figura==1) {
+						drawpanel.rysujSoczewkeWklesla(getGraphics());
+						drawpanel.rysujLinie(getGraphics());
+					}else if(figura==2) {
+						drawpanel.rysujSoczewkeWklesla(getGraphics());
+						drawpanel.rysujTrojkat(getGraphics());
+					}else if(figura==3) {
+						drawpanel.rysujSoczewkeWklesla(getGraphics());
+						drawpanel.rysujKwadrat(getGraphics());
+					}else if(figura==4) {
+						drawpanel.rysujSoczewkeWklesla(getGraphics());
+						drawpanel.rysujPieciokat(getGraphics());
+					}else if(figura==5) {
+						drawpanel.rysujSoczewkeWklesla(getGraphics());
+						drawpanel.rysujKolo(getGraphics());
+					}
+					break;
+				}
 			}
 			case "polski": {
 				lensLabel.setText("Soczewka");
@@ -239,7 +269,7 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				newButton.setText("nowy");
 				focalLabel.setText("Ogniskowa:");
 				add.setText("Dodaj");
-				objectLabel1.setText("Objekt");
+				objectLabel1.setText("Obiekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
 				
 				menu.setText("KOLOR T£A");
@@ -259,7 +289,7 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				lensShape[1]="trojkat";
 				lensShape[2]="kwadrat";
 				lensShape[3]="pieciokat";
-				lensShape[4]="szesciokat";
+				lensShape[4]="kolo";
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[0]);
 				
@@ -305,7 +335,7 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				lensShape[1]="triangle";
 				lensShape[2]="square";
 				lensShape[3]="pentagon";
-				lensShape[4]="hexagon";
+				lensShape[4]="oval";
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[0]);
 				
@@ -323,8 +353,16 @@ public class AkszynLisenerDoAdd extends JFrame implements ActionListener {
 				break;
 			}
 			
-			case "focaltext":{
-				
+			case "focalvalue":{
+				Scanner userinputf = new Scanner(System.in);
+				focalval=this.userinputf;
+				//repaint();
+				break;
+			}
+			case "nvalue":{
+				Scanner userinputn = new Scanner(System.in);
+				nval=this.userinputn;
+				//repaint();
 				break;
 			}
 		}			
