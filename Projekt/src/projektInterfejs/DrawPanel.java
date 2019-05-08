@@ -32,7 +32,6 @@ public class DrawPanel extends JPanel{
         g2.draw(new Line2D.Float(0,(float) (height.getHeight())/2, (float) width.getWidth(),(float) (height.getHeight())/2));
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
 	}
-	
 	//////zaznacza odleglosc ogniskowych
 	public void rysujOgniskowe(Graphics g, JTextField tekst) {
 		Graphics2D g9= (Graphics2D) g;

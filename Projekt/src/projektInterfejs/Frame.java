@@ -378,7 +378,6 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks4);
-				
 				repaint();
 				break;
 			}
