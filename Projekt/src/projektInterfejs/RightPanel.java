@@ -18,23 +18,21 @@ import javax.swing.JTextField;
 public class RightPanel extends JPanel implements ActionListener{
 
 	//right
-			//DrawPanel drawpanel= new DrawPanel();
-	
-			private JPanel rightPanel;
-			private JLabel lensLabel;
-			private String[] lenses= {"converging", "diverging"};
-			private String[] lensShape= {"line", "triangle", "square", "pentagon", "hexagon"};
-			private JComboBox lensType;
-			private JLabel nLabel;
-			private JTextField nTextField;
-			private JComboBox objectType;
-			private JButton add;
-			private JTextField focalTextField;
-			private JLabel language, objectLabel1, objectLabel2, focalLabel;
-			private JButton polskiButton, englishButton, saveButton, newButton;	
+	//DrawPanel drawpanel= new DrawPanel();
+	private JPanel rightPanel;
+	private JLabel lensLabel;
+	private String[] lenses= {"converging", "diverging"};
+	private String[] lensShape= {"line", "triangle", "square", "pentagon", "hexagon"};
+	private JComboBox lensType;
+	private JLabel nLabel;
+	private JTextField nTextField;
+	private JComboBox objectType;
+	private JButton add;
+	private JTextField focalTextField;
+	private JLabel language, objectLabel1, objectLabel2, focalLabel;
+	private JButton polskiButton, englishButton, saveButton, newButton;	
 			
-			//public int zmienna=0;
-			public int rogi=3;
+	public int rogi=3;
 			
 	public RightPanel() {
 		
@@ -224,19 +222,6 @@ public class RightPanel extends JPanel implements ActionListener{
 				
 				break;
 			}
-		}
-				
-	}	
-//	public void trajangle() {
-//		Triangle traj= new Triangle();
-//		frame.add(traj);
-//	}
-	
-	
-	// zrobilem do konca zmiane jezykow
-	//TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeEST
-	
-	
-	
-	
+		}			
+	}
 }

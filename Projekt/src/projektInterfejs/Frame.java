@@ -288,6 +288,8 @@ public class Frame extends JFrame implements ActionListener {
 				menuItemY.setText("JELO£");
 				menuItemW.setText("£AJT");
 				
+				int indeks1= lensType.getSelectedIndex();
+				
 				lenses[0]="skupiajaca";
 				lenses[1]="rozpraszajaca";
 				lensType.removeItemAt(1);
@@ -295,11 +297,16 @@ public class Frame extends JFrame implements ActionListener {
 				lensType.addItem(lenses[0]);
 				lensType.addItem(lenses[1]);
 				
+				lensType.setSelectedIndex(indeks1);
+				
 				lensShape[0]="linia";
 				lensShape[1]="trojkat";
 				lensShape[2]="kwadrat";
 				lensShape[3]="pieciokat";
 				lensShape[4]="kolo";
+				
+				int indeks= objectType.getSelectedIndex();
+				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[0]);
 				
@@ -314,6 +321,8 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
+				
+				objectType.setSelectedIndex(indeks);
 				repaint();
 				break;
 			}
@@ -335,12 +344,18 @@ public class Frame extends JFrame implements ActionListener {
 				menuItemY.setText("Yellow");
 				menuItemW.setText("White");
 				
+				int indeks2= lensType.getSelectedIndex();
+				
 				lenses[0]="converging";
 				lenses[1]="diverging";
 				lensType.removeItemAt(1);
 				lensType.removeItemAt(0);
 				lensType.addItem(lenses[0]);
 				lensType.addItem(lenses[1]);
+				
+				lensType.setSelectedIndex(indeks2);
+				
+				int indeks4= objectType.getSelectedIndex();
 				
 				lensShape[0]="line";
 				lensShape[1]="triangle";
@@ -361,6 +376,9 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
+				
+				objectType.setSelectedIndex(indeks4);
+				
 				repaint();
 				break;
 			}
