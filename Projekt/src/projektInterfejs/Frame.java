@@ -334,7 +334,7 @@ public class Frame extends JFrame implements ActionListener {
 				saveButton.setText("save");
 				newButton.setText("new");
 				focalLabel.setText("Focal length:");
-				add.setText("Add");
+				//add.setText("Add");
 				objectLabel1.setText("Object");
 				nLabel.setText("Refractive index n=");
 				

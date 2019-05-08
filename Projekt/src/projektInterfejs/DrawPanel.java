@@ -168,7 +168,6 @@ public class DrawPanel extends JPanel{
 
 	public void clear() {
 		this.setBackground(Color.WHITE);
-		//repaint();
-		
+		//to ma usuwac narysowane smieszki
 	}
 }
