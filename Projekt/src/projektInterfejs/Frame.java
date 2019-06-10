@@ -10,8 +10,12 @@ import java.awt.HeadlessException;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -34,6 +38,7 @@ public class Frame extends JFrame implements ActionListener {
 		private JMenuItem menuItemY;
 		
 		public DrawPanel drawpanel;
+		
 		
 		//right panel
 		private JPanel rightPanel;
@@ -293,8 +298,8 @@ public class Frame extends JFrame implements ActionListener {
 				lenses[0]="skupiajaca";
 				lenses[1]="rozpraszajaca";
 				lensType.removeItemAt(1);
-				lensType.removeItemAt(0);
 				lensType.addItem(lenses[0]);
+				lensType.removeItemAt(0);
 				lensType.addItem(lenses[1]);
 				
 				lensType.setSelectedIndex(indeks1);
@@ -323,7 +328,7 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks);
-				repaint();
+				//repaint();
 				break;
 			}
 			case "english": {
@@ -349,8 +354,8 @@ public class Frame extends JFrame implements ActionListener {
 				lenses[0]="converging";
 				lenses[1]="diverging";
 				lensType.removeItemAt(1);
-				lensType.removeItemAt(0);
 				lensType.addItem(lenses[0]);
+				lensType.removeItemAt(0);
 				lensType.addItem(lenses[1]);
 				
 				lensType.setSelectedIndex(indeks2);
@@ -378,7 +383,7 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks4);
-				repaint();
+				//repaint();
 				break;
 			}
 			
