@@ -17,6 +17,12 @@ import javax.swing.JTextField;
 
 public class RightPanel extends JPanel implements ActionListener{
 
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+/*
 	//right
 	//DrawPanel drawpanel= new DrawPanel();
 	private JPanel rightPanel;
@@ -223,5 +229,5 @@ public class RightPanel extends JPanel implements ActionListener{
 				break;
 			}
 		}			
-	}
+	}*/
 }

@@ -57,7 +57,7 @@ public class Frame extends JFrame implements ActionListener {
 		private JButton polskiButton, englishButton, saveButton, newButton;	
 		public int figura=1;
 		public int soczewka=1;
-		public static int focalLength=1;
+		public static int focalLength=2;
 		public int userinputf;
 		public double nval=1.5;
 		public double userinputn;

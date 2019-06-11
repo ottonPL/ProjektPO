@@ -77,7 +77,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g3.drawImage(linia,(int)width.getWidth()/4,(int) height.getHeight()/2-20, 100, 100, null);
+        g3.drawImage(linia,(int)width.getWidth()/4+75,(int) height.getHeight()/2-20, 100, 100, null);
 	}
 	
 	public void rysujLinieF2(Graphics g) {
@@ -105,7 +105,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g3.drawImage(linia,(int)width.getWidth()/4,(int) height.getHeight()/2-20, 100, 100, null);
+        g3.drawImage(linia,(int)width.getWidth()/4-75,(int) height.getHeight()/2-20, 100, 100, null);
 	}
 	
 	public void rysujLinieF4(Graphics g) {
@@ -119,7 +119,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g3.drawImage(linia,(int)width.getWidth()/4,(int) height.getHeight()/2-20, 100, 100, null);
+        g3.drawImage(linia,(int)width.getWidth()/4-150,(int) height.getHeight()/2-20, 100, 100, null);
 	}
 	
 	public void rysujLinieF5(Graphics g) {
@@ -133,7 +133,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g3.drawImage(linia,(int)width.getWidth()/4,(int) height.getHeight()/2-20, 100, 100, null);
+        g3.drawImage(linia,(int)width.getWidth()/4-200,(int) height.getHeight()/2-20, 100, 100, null);
 	}
 	
 	
@@ -152,7 +152,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         
-        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g3.drawImage(trojkat,(int) width.getWidth()/4+75,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
 	public void rysujTrojkatF2(Graphics g) {
@@ -186,7 +186,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         
-        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g3.drawImage(trojkat,(int) width.getWidth()/4-75,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
 	public void rysujTrojkatF4(Graphics g) {
@@ -203,7 +203,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         
-        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g3.drawImage(trojkat,(int) width.getWidth()/4-150,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
 	public void rysujTrojkatF5(Graphics g) {
@@ -220,7 +220,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         
-        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g3.drawImage(trojkat,(int) width.getWidth()/4-200,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	//////TO RYSUJE OBIEKT: KWADRAT
 	public void rysujKwadratF1(Graphics g) {
@@ -237,7 +237,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
        
-        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+        g3.drawImage(kwadrat,(int) width.getWidth()/4+75,(int) height.getHeight()/2-32, 100, 100, null);
 	}
 	
 	public void rysujKwadratF2(Graphics g) {
@@ -271,7 +271,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
        
-        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+        g3.drawImage(kwadrat,(int) width.getWidth()/4-75,(int) height.getHeight()/2-32, 100, 100, null);
 	}
 	
 	public void rysujKwadratF4(Graphics g) {
@@ -288,7 +288,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
        
-        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+        g3.drawImage(kwadrat,(int) width.getWidth()/4-150,(int) height.getHeight()/2-32, 100, 100, null);
 	}
 	
 	public void rysujKwadratF5(Graphics g) {
@@ -305,7 +305,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
        
-        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+        g3.drawImage(kwadrat,(int) width.getWidth()/4-200,(int) height.getHeight()/2-32, 100, 100, null);
 	}
 	
 	//////TO RYSUJE OBIEKT: PIÊCIOK¥T
@@ -323,7 +323,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
 
-        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+        g2.drawImage(pentagon,(int) width.getWidth()/4+75,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
 	
 	public void rysujPieciokatF2(Graphics g) {
@@ -357,7 +357,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
 
-        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+        g2.drawImage(pentagon,(int) width.getWidth()/4-75,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
 	
 	public void rysujPieciokatF4(Graphics g) {
@@ -374,7 +374,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
 
-        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+        g2.drawImage(pentagon,(int) width.getWidth()/4-150,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
 	
 	public void rysujPieciokatF5(Graphics g) {
@@ -391,7 +391,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
 
-        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+        g2.drawImage(pentagon,(int) width.getWidth()/4-200,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
 	//////TO RYSUJE OBIEKT: KO£O
 	public void rysujKoloF1(Graphics g) {
@@ -408,7 +408,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
     
-        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+        g3.drawImage(kolko,(int) width.getWidth()/4+75,(int) height.getWidth()/3-20, 100, 100, null);
 	}
 	
 	public void rysujKoloF2(Graphics g) {
@@ -442,7 +442,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
     
-        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+        g3.drawImage(kolko,(int) width.getWidth()/4-75,(int) height.getWidth()/3-20, 100, 100, null);
 	}
 	
 	public void rysujKoloF4(Graphics g) {
@@ -459,7 +459,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
     
-        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+        g3.drawImage(kolko,(int) width.getWidth()/4-150,(int) height.getWidth()/3-20, 100, 100, null);
 	}
 	
 	public void rysujKoloF5(Graphics g) {
@@ -476,7 +476,7 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
     
-        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+        g3.drawImage(kolko,(int) width.getWidth()/4-200,(int) height.getWidth()/3-20, 100, 100, null);
 	}
 	
 	//////TO RYSUJE OBIEKT: SOCZEWKA WYPUK£A	
@@ -528,7 +528,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int) width.getWidth()/4-360,(int) height.getHeight()/2-230, 100*4, 100*4, null);
+        System.out.println("Virtual, magnified, image behind the object");
+	}
 	
 	public void obrazowanieLiniiF2Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -543,7 +545,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        //g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Real and inverted, highly magnified, image in INFINITY");
+	}
 	
 	public void obrazowanieLiniiF3Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -558,7 +562,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int) width.getWidth()/4+360,(int) height.getHeight()/2-230, 100*4, 100*4, null);	
+        System.out.println("Real and inverted, magnified, image beyond 2F on the other side of the lense");
+	}
 	
 	public void obrazowanieLiniiF4Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -573,7 +579,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int)width.getWidth()/4+450,(int) height.getHeight()/2-20, 100, 100, null);
+        System.out.println("Real and inverted, same size, image at 2F on the other side of the lense");
+	}
 	
 	public void obrazowanieLiniiF5Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -588,7 +596,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int)width.getWidth()/4+420,(int) height.getHeight()/2+10, 55, 55, null);
+        System.out.println("Real and inverted, diminished, image between F and 2F on the other side of the lense");
+        }
 	
 	public void obrazowanieLiniiF1Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -603,7 +613,10 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+       // g6.drawImage(linia,(int)width.getWidth()/4+150,(int) height.getHeight()/2+20, 40, 40, null);
+        g6.drawImage(linia,(int)width.getWidth()/4+120,(int) height.getHeight()/2+5, 70, 70, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
+        }
 	
 	public void obrazowanieLiniiF2Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -618,7 +631,10 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        //g6.drawImage(linia,(int)width.getWidth()/4+120,(int) height.getHeight()/2+15, 50, 50, null);
+        g6.drawImage(linia,(int)width.getWidth()/4+90,(int) height.getHeight()/2+10, 60, 60, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
+        }
 	
 	public void obrazowanieLiniiF3Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -633,7 +649,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int)width.getWidth()/4+60,(int) height.getHeight()/2+15, 50, 50, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
+        }
 	
 	public void obrazowanieLiniiF4Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -648,7 +666,10 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+        g6.drawImage(linia,(int)width.getWidth()/4+50,(int) height.getHeight()/2+20, 40, 40, null);
+       // g6.drawImage(linia,(int)width.getWidth()/4+60,(int) height.getHeight()/2+5, 70, 70, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
+        }
 	
 	public void obrazowanieLiniiF5Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -663,7 +684,10 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+       // g6.drawImage(linia,(int)width.getWidth()/4+30,(int) height.getHeight()/2-5, 80, 80, null);
+        g6.drawImage(linia,(int)width.getWidth()/4+40,(int) height.getHeight()/2+25, 35, 35, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
+        }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	public void obrazowanieTrojkataF1Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;

@@ -21,7 +21,6 @@ public class BottomPanel extends JPanel {
 	private static final int SLIDER_MIN = 1;
 	private static final int SLIDER_MAX = 5;
 	private static final int SLIDER_INIT = 2;
-	private int odleglosc=0;
 	
 	public BottomPanel() {
 
