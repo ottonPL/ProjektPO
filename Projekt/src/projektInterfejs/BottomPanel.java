@@ -39,18 +39,6 @@ public class BottomPanel extends JPanel {
             @Override
             public void stateChanged(ChangeEvent arg0) {
                Frame.focalLength = slider.getValue();
-               
-               /*if(odleglosc>2) {        
-            	  //rightPanelComponent.updateSymulation(odleglosc, true, false, true);
-               }else if (odleglosc==2) {
-            	//rysuj case1
-               }else if (odleglosc<2 || odleglosc>1) {
-            	//rysuj case2
-               }else if (odleglosc==1) {
-            	//rysuj case3
-               }else if (odleglosc<1 || odleglosc>0) {
-            	//rysuj case4
-               }	*/
             }
         });	
 		

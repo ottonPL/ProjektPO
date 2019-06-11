@@ -533,19 +533,6 @@ public class DrawPanel extends JPanel{
 	}
 	
 	public void obrazowanieLiniiF2Cov(Graphics g) {
-		Graphics2D g6= (Graphics2D) g;
-		g6.setStroke(new BasicStroke(4));
-		
-		Dimension width=getSize();   //pobiera rozmiar drawPanelu
-        Dimension height= getSize();
-        
-        pathObiekt="linia.png";
-        try {
-			linia=ImageIO.read(new File(pathObiekt));
-		} catch(IOException e){
-			e.printStackTrace();
-		}
-        //g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
         System.out.println("Real and inverted, highly magnified, image in INFINITY");
 	}
 	
