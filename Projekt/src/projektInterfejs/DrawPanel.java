@@ -5,15 +5,15 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Point;
+//import java.awt.Point;
 import java.awt.Polygon;
-import java.awt.Shape;
+//import java.awt.Shape;
 import java.awt.geom.AffineTransform;
-import java.awt.geom.CubicCurve2D;
-import java.awt.geom.GeneralPath;
+//import java.awt.geom.CubicCurve2D;
+//import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
+//import java.awt.geom.Point2D;
+//import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +25,10 @@ import javax.swing.JTextField;
 
 public class DrawPanel extends JPanel{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static BufferedImage skupiajaca, rozpraszajaca;
 	private static BufferedImage kolko, kwadrat, pentagon, trojkat;
 	
@@ -226,7 +230,7 @@ public class DrawPanel extends JPanel{
 	
 	
 	public void obrazowanieTrojkata(Graphics g) {
-		Graphics2D g6= (Graphics2D) g;//XD
+		//Graphics2D g6= (Graphics2D) g;//XD
 	}
 
 	public void clear() {
