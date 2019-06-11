@@ -135,8 +135,10 @@ public class DrawPanel extends JPanel{
 		}
         g3.drawImage(linia,(int)width.getWidth()/4,(int) height.getHeight()/2-20, 100, 100, null);
 	}
+	
+	
 	//////TO RYSUJE OBIEKT: TRÓJK¥T
-	public void rysujTrojkat(Graphics g) {
+	public void rysujTrojkatF1(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru  
 
@@ -151,11 +153,145 @@ public class DrawPanel extends JPanel{
 		}
         
         g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
-       
 	}
 	
+	public void rysujTrojkatF2(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru  
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        
+        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	
+	public void rysujTrojkatF3(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru  
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        
+        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	
+	public void rysujTrojkatF4(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru  
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        
+        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	
+	public void rysujTrojkatF5(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru  
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        
+        g3.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
 	//////TO RYSUJE OBIEKT: KWADRAT
-	public void rysujKwadrat(Graphics g) {
+	public void rysujKwadratF1(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+        
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+       
+        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+	}
+	
+	public void rysujKwadratF2(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+        
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+       
+        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+	}
+	
+	public void rysujKwadratF3(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+        
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+       
+        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+	}
+	
+	public void rysujKwadratF4(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+        
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+       
+        g3.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-32, 100, 100, null);
+	}
+	
+	public void rysujKwadratF5(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru
         
@@ -173,7 +309,75 @@ public class DrawPanel extends JPanel{
 	}
 	
 	//////TO RYSUJE OBIEKT: PIÊCIOK¥T
-	public void rysujPieciokat(Graphics g) {
+	public void rysujPieciokatF1(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		g2.setStroke(new BasicStroke(2));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+
+        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+	}
+	
+	public void rysujPieciokatF2(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		g2.setStroke(new BasicStroke(2));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+
+        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+	}
+	
+	public void rysujPieciokatF3(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		g2.setStroke(new BasicStroke(2));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+
+        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+	}
+	
+	public void rysujPieciokatF4(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		g2.setStroke(new BasicStroke(2));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+		
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+
+        g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
+	}
+	
+	public void rysujPieciokatF5(Graphics g) {
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setStroke(new BasicStroke(2));
 		
@@ -190,7 +394,75 @@ public class DrawPanel extends JPanel{
         g2.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
 	//////TO RYSUJE OBIEKT: KO£O
-	public void rysujKolo(Graphics g) {
+	public void rysujKoloF1(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+    
+        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+	}
+	
+	public void rysujKoloF2(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+    
+        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+	}
+	
+	public void rysujKoloF3(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+    
+        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+	}
+	
+	public void rysujKoloF4(Graphics g) {
+		Graphics2D g3 = (Graphics2D) g;
+        g3.setStroke(new BasicStroke(2));  //do rozmiaru
+
+        Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+    
+        g3.drawImage(kolko,(int) width.getWidth()/4,(int) height.getWidth()/3-20, 100, 100, null);
+	}
+	
+	public void rysujKoloF5(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru
 
@@ -243,27 +515,292 @@ public class DrawPanel extends JPanel{
 		g5.drawImage(rozpraszajaca,(int) width.getWidth()/4+8,(int) height.getHeight()/3, (int) width.getWidth()/2, (int) height.getHeight()/2, null);
 	}
 	
-	public void obrazowanieLiniiF1(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
-	}
+	public void obrazowanieLiniiF1Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
 	
-	public void obrazowanieLiniiF2(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
-	}
+	public void obrazowanieLiniiF2Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
 	
-	public void obrazowanieLiniiF3(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
-	}
+	public void obrazowanieLiniiF3Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
 	
-	public void obrazowanieLiniiF4(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
-	}
+	public void obrazowanieLiniiF4Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
 	
-	public void obrazowanieLiniiF5(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
-	}
+	public void obrazowanieLiniiF5Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
 	
-	public void obrazowanieTrojkata(Graphics g) {
+	public void obrazowanieLiniiF1Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+	
+	public void obrazowanieLiniiF2Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+	
+	public void obrazowanieLiniiF3Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+	
+	public void obrazowanieLiniiF4Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+	
+	public void obrazowanieLiniiF5Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="linia.png";
+        try {
+			linia=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(linia,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);	}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	public void obrazowanieTrojkataF1Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF2Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF3Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF4Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF5Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF1Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF2Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF3Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF4Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="trojkat.png";
+        try {
+			trojkat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieTrojkataF5Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
 		
@@ -279,12 +816,28 @@ public class DrawPanel extends JPanel{
         g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
-	public void obrazowanieKwadratu(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
+	public void obrazowanieKwadratuF1(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
 	
 	public void obrazowaniePieciokata(Graphics g) {
+		//Graphics2D g6= (Graphics2D) g;//XD
+	}
+	
+	public void obrazowanieKolaF1(Graphics g) {
 		//Graphics2D g6= (Graphics2D) g;//XD
 	}
 

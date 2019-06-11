@@ -242,30 +242,283 @@ public class Frame extends JFrame implements ActionListener {
 							drawpanel.rysujSoczewkeWypukla(getGraphics());
 							drawpanel.rysujLinieF1(getGraphics());
 							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-							drawpanel.obrazowanieLiniiF1(getGraphics());
+							drawpanel.obrazowanieLiniiF1Cov(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujLinieF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF2Cov(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujLinieF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF3Cov(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujLinieF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF4Cov(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujLinieF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF5Cov(getGraphics());
 						}
 						
 					}else if(figura==2) {
-						drawpanel.rysujSoczewkeWypukla(getGraphics());
-						drawpanel.rysujTrojkat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-						drawpanel.obrazowanieTrojkata(getGraphics());
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujTrojkatF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF1Cov(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujTrojkatF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF2Cov(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujTrojkatF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF3Cov(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujTrojkatF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF4Cov(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujTrojkatF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF5Cov(getGraphics());
+						}
+						
 					}else if(figura==3) {
-						drawpanel.rysujSoczewkeWypukla(getGraphics());
-						drawpanel.rysujKwadrat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKwadratF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF1Cov(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKwadratF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF2Cov(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKwadratF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF3Cov(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKwadratF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF4Cov(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKwadratF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF5Cov(getGraphics());
+						}
+						
 					}else if(figura==4) {
-						drawpanel.rysujSoczewkeWypukla(getGraphics());
-						drawpanel.rysujPieciokat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujPieciokatF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF1Cov(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujPieciokatF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF2Cov(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujPieciokatF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF3Cov(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujPieciokatF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF4Cov(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujPieciokatF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF5Cov(getGraphics());
+						}
+						
 					}else if(figura==5) {
-						drawpanel.rysujSoczewkeWypukla(getGraphics());
-						drawpanel.rysujKolo(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKoloF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF1Cov(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKoloF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF2Cov(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKoloF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF3Cov(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKoloF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF4Cov(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujKoloF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF5Cov(getGraphics());
+						}
 					}
 					break;
 				}else if (soczewka==2) {
 					if(figura==1) {
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujLinieF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF1Div(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujLinieF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF2Div(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujLinieF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF3Div(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujLinieF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF4Div(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujLinieF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF5Div(getGraphics());
+						}
+						
+					}else if(figura==2) {
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujTrojkatF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF1Div(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujTrojkatF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF2Div(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujTrojkatF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF3Div(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujTrojkatF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF4Div(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujTrojkatF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieTrojkataF5Div(getGraphics());
+						}
+						
+					}else if(figura==3) {
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKwadratF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF1Div(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKwadratF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF2Div(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKwadratF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF3Div(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKwadratF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF4Div(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKwadratF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKwadratuF5Div(getGraphics());
+						}
+						
+					}else if(figura==4) {
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujPieciokatF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF1Div(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujPieciokatF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF2Div(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujPieciokatF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF3Div(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujPieciokatF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF4Div(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujPieciokatF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowaniePieciokataF5Div(getGraphics());
+						}
+						
+					}else if(figura==5) {
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKoloF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF1Div(getGraphics());
+						}else if(focalLength==2) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKoloF2(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF2Div(getGraphics());
+						}else if(focalLength==3) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKoloF3(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF3Div(getGraphics());
+						}else if(focalLength==4) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKoloF4(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF4Div(getGraphics());
+						}else if(focalLength==5) {
+							drawpanel.rysujSoczewkeWklesla(getGraphics());
+							drawpanel.rysujKoloF5(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieKolaF5Div(getGraphics());
+						}
+					/*if(figura==1) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujLinieF1(getGraphics());
 						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
@@ -285,8 +538,9 @@ public class Frame extends JFrame implements ActionListener {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
 						drawpanel.rysujKolo(getGraphics());
 						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-					}
+					}*/
 					break;
+					}
 				}
 			}
 			case "polski": {
