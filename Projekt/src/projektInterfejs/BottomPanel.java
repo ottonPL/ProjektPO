@@ -16,18 +16,17 @@ import javax.swing.event.ChangeListener;
 public class BottomPanel extends JPanel {
 
 	//bottom
-	private JPanel bottomPanel;
 	private JLabel objectLabel;
 	private JSlider slider;
-	private static final int SLIDER_MIN = 0;
-	private static final int SLIDER_MAX = 3;
-	private static final int SLIDER_INIT = 1;
+	private static final int SLIDER_MIN = 1;
+	private static final int SLIDER_MAX = 5;
+	private static final int SLIDER_INIT = 2;
 	private int odleglosc=0;
 	
 	public BottomPanel() {
 
 		//bottom
-		bottomPanel= new JPanel();
+		
 		objectLabel= new JLabel("F");
 		
 		slider= new JSlider(JSlider.HORIZONTAL, SLIDER_MIN, SLIDER_MAX, SLIDER_INIT);  
@@ -40,19 +39,19 @@ public class BottomPanel extends JPanel {
 
             @Override
             public void stateChanged(ChangeEvent arg0) {
-               odleglosc = slider.getValue();
+               Frame.focalLength = slider.getValue();
                
-               if(odleglosc>2*Frame.focalval) {        
+               /*if(odleglosc>2) {        
             	  //rightPanelComponent.updateSymulation(odleglosc, true, false, true);
-               }else if (odleglosc==2*Frame.focalval) {
+               }else if (odleglosc==2) {
             	//rysuj case1
-               }else if (odleglosc<2*Frame.focalval || odleglosc>Frame.focalval) {
+               }else if (odleglosc<2 || odleglosc>1) {
             	//rysuj case2
-               }else if (odleglosc==Frame.focalval) {
+               }else if (odleglosc==1) {
             	//rysuj case3
-               }else if (odleglosc<Frame.focalval || odleglosc>0) {
+               }else if (odleglosc<1 || odleglosc>0) {
             	//rysuj case4
-               }	
+               }	*/
             }
         });	
 		

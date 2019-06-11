@@ -57,7 +57,7 @@ public class Frame extends JFrame implements ActionListener {
 		private JButton polskiButton, englishButton, saveButton, newButton;	
 		public int figura=1;
 		public int soczewka=1;
-		public static int focalval=1;
+		public static int focalLength=1;
 		public int userinputf;
 		public double nval=1.5;
 		public double userinputn;
@@ -133,11 +133,11 @@ public class Frame extends JFrame implements ActionListener {
 		v1.setLayout(new FlowLayout());
 				
 		nLabel= new JLabel("Refractive index n=");
-		nTextField= new JTextField(" 1,5 ");
+		nTextField= new JTextField("1,5");
 		nTextField.addActionListener(this);
 		nTextField.setActionCommand("nvalue");
 				
-		focalTextField= new JTextField(" 1 ");
+		focalTextField= new JTextField("150");
 		focalTextField.addActionListener(this);
 		focalTextField.setActionCommand("focalvalue");
 		focalLabel= new JLabel("Focal lenght:");
@@ -238,13 +238,18 @@ public class Frame extends JFrame implements ActionListener {
 			case "add": {
 				if(soczewka==1) {
 					if(figura==1) {
-						drawpanel.rysujSoczewkeWypukla(getGraphics());
-						drawpanel.rysujLinie(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+						if(focalLength==1) {
+							drawpanel.rysujSoczewkeWypukla(getGraphics());
+							drawpanel.rysujLinieF1(getGraphics());
+							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+							drawpanel.obrazowanieLiniiF1(getGraphics());
+						}
+						
 					}else if(figura==2) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujTrojkat(getGraphics());
 						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
+						drawpanel.obrazowanieTrojkata(getGraphics());
 					}else if(figura==3) {
 						drawpanel.rysujSoczewkeWypukla(getGraphics());
 						drawpanel.rysujKwadrat(getGraphics());
@@ -262,7 +267,7 @@ public class Frame extends JFrame implements ActionListener {
 				}else if (soczewka==2) {
 					if(figura==1) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujLinie(getGraphics());
+						drawpanel.rysujLinieF1(getGraphics());
 						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}else if(figura==2) {
 						drawpanel.rysujSoczewkeWklesla(getGraphics());
@@ -296,11 +301,11 @@ public class Frame extends JFrame implements ActionListener {
 				objectLabel1.setText("Obiekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
 				
-				menu.setText("Kolor t�a");
+				menu.setText("Kolor tla");
 				menuItemM.setText("magenta");
 				menuItemC.setText("cyjan");
-				menuItemY.setText("��ty");
-				menuItemW.setText("bia�y");
+				menuItemY.setText("zolty");
+				menuItemW.setText("bialy");
 				
 				int indeks1= lensType.getSelectedIndex();
 				
