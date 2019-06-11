@@ -815,8 +815,143 @@ public class DrawPanel extends JPanel{
 		}
         g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
-	
-	public void obrazowanieKwadratuF1(Graphics g) {
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	public void obrazowanieKwadratuF1Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF2Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF3Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF4Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF5Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF1Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF2Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF3Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF4Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kwadrat.png";
+        try {
+			kwadrat=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKwadratuF5Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
 		
@@ -832,15 +967,312 @@ public class DrawPanel extends JPanel{
         g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
-	
-	public void obrazowaniePieciokata(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public void obrazowaniePieciokataF1Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	
-	public void obrazowanieKolaF1(Graphics g) {
-		//Graphics2D g6= (Graphics2D) g;//XD
+	public void obrazowaniePieciokataF2Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
-
+	public void obrazowaniePieciokataF3Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF4Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF5Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF1Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	
+	public void obrazowaniePieciokataF2Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF3Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF4Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowaniePieciokataF5Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="pentagon.png";
+        try {
+			pentagon=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(pentagon,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public void obrazowanieKolaF1Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF2Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF3Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF4Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF5Cov(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	
+	public void obrazowanieKolaF1Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF2Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF3Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF4Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+	public void obrazowanieKolaF5Div(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;
+		g6.setStroke(new BasicStroke(4));
+		
+		Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        Dimension height= getSize();
+        
+        pathObiekt="kolko.png";
+        try {
+			kolko=ImageIO.read(new File(pathObiekt));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+        g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+	}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void clear() {
 		this.setBackground(Color.WHITE);
 		//to ma usuwac narysowane smieszki
