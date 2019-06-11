@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -18,6 +19,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -26,6 +28,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
 
 
 public class Frame extends JFrame implements ActionListener {
@@ -38,8 +42,6 @@ public class Frame extends JFrame implements ActionListener {
 		private JMenuItem menuItemY;
 		
 		public DrawPanel drawpanel;
-		
-		
 		//right panel
 		private JPanel rightPanel;
 		private JLabel lensLabel;
@@ -55,7 +57,7 @@ public class Frame extends JFrame implements ActionListener {
 		private JButton polskiButton, englishButton, saveButton, newButton;	
 		public int figura=1;
 		public int soczewka=1;
-		public int focalval=100;
+		public static int focalval=1;
 		public int userinputf;
 		public double nval=1.5;
 		public double userinputn;
@@ -131,16 +133,13 @@ public class Frame extends JFrame implements ActionListener {
 		v1.setLayout(new FlowLayout());
 				
 		nLabel= new JLabel("Refractive index n=");
-		nTextField= new JTextField("1,5");
+		nTextField= new JTextField(" 1,5 ");
 		nTextField.addActionListener(this);
 		nTextField.setActionCommand("nvalue");
 				
-		focalTextField= new JTextField("100");
+		focalTextField= new JTextField(" 1 ");
 		focalTextField.addActionListener(this);
 		focalTextField.setActionCommand("focalvalue");
-				
-		nTextField= new JTextField("1,5");
-		focalTextField= new JTextField("100");
 		focalLabel= new JLabel("Focal lenght:");
 							
 		objectLabel1= new JLabel("object");
@@ -171,9 +170,13 @@ public class Frame extends JFrame implements ActionListener {
 		englishButton.setActionCommand("english");
 				
 		saveButton= new JButton("save");
+		saveButton.addActionListener(this);
+		saveButton.setActionCommand("save");
+		
 		newButton= new JButton("new");
 		newButton.addActionListener(this);
 		newButton.setActionCommand("NEW");
+		
 		v2.add(polskiButton);
 		v2.add(englishButton);
 		v2.add(saveButton);
@@ -183,7 +186,6 @@ public class Frame extends JFrame implements ActionListener {
 		rightPanel.add(lensType);
 		v1.add(nLabel);
 		v1.add(nTextField);
-		//this.setSize(new Dimension(1000,200));
 		rightPanel.add(v1);
 		rightPanel.add(objectLabel1);
 		rightPanel.add(objectType);
@@ -200,6 +202,7 @@ public class Frame extends JFrame implements ActionListener {
 	    this.add(rightPanel, BorderLayout.EAST);
 	    this.add(BPanel, BorderLayout.PAGE_END);	    
 	}
+	
 	public void actionPerformed(ActionEvent arg0) {
 		switch(arg0.getActionCommand()) {
 			case "NEW": {
@@ -293,11 +296,11 @@ public class Frame extends JFrame implements ActionListener {
 				objectLabel1.setText("Obiekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
 				
-				menu.setText("Kolor t³a");
+				menu.setText("Kolor tï¿½a");
 				menuItemM.setText("magenta");
 				menuItemC.setText("cyjan");
-				menuItemY.setText("¿ó³ty");
-				menuItemW.setText("bia³y");
+				menuItemY.setText("ï¿½ï¿½ty");
+				menuItemW.setText("biaï¿½y");
 				
 				int indeks1= lensType.getSelectedIndex();
 				
@@ -334,7 +337,6 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks);
-				//repaint();
 				break;
 			}
 			case "english": {
@@ -389,21 +391,38 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks4);
-				//repaint();
 				break;
 			}
 			
-			case "focalvalue":{
+			/*case "focalvalue":{
 				Scanner userinputf = new Scanner(System.in);
 				focalval=this.userinputf;
 				//repaint();
 				break;
-			}
-			case "nvalue":{
+			}*/
+			/*case "nvalue":{
 				Scanner userinputn = new Scanner(System.in);
 				nval=this.userinputn;
 				//repaint();
 				break;
+			}*/
+			case "save":{
+				BufferedImage image = new BufferedImage(drawpanel.getWidth(), drawpanel.getHeight(),BufferedImage.TYPE_INT_ARGB);
+	            Graphics2D g2d = image.createGraphics();
+	            drawpanel.paintAll(g2d);
+	            JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+	            FileNameExtensionFilter filter = new FileNameExtensionFilter(
+	                    "PNG images", "png");
+	            chooser.setFileFilter(filter);
+	            int returnVal = chooser.showSaveDialog(null);
+	            if(returnVal == JFileChooser.APPROVE_OPTION) {
+	                File outputFile = new File(chooser.getSelectedFile().getAbsolutePath() + ".png");
+	                try {
+	                    ImageIO.write(image, "png", outputFile);
+	                } catch (IOException exception) {
+	                    System.out.println(exception.getMessage());
+	                }
+	            }
 			}
 		}			
 	}

@@ -32,7 +32,7 @@ public class RightPanel extends JPanel implements ActionListener{
 	private JLabel language, objectLabel1, objectLabel2, focalLabel;
 	private JButton polskiButton, englishButton, saveButton, newButton;	
 			
-	public int rogi=3;
+	
 			
 	public RightPanel() {
 		
@@ -117,7 +117,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			case "obtype": {
 				if(objectType.getSelectedIndex()==0) {
 						//polskiButton.setBackground(Color.MAGENTA);
-						rogi=2;
+						
 						break;
 				}else if(objectType.getSelectedIndex()==1) {
 					//costam
@@ -132,7 +132,7 @@ public class RightPanel extends JPanel implements ActionListener{
 			}
 			case "add": {
 				//englishButton.setBackground(Color.CYAN);
-				rogi=2;
+				
 				revalidate();
 				repaint();
 				break;
