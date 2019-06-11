@@ -60,7 +60,12 @@ public class Frame extends JFrame implements ActionListener {
 		public double nval=1.5;
 		public double userinputn;
 		//end of right panel
+		public BottomPanel BPanel;
 		
+		//bottom panel
+		
+		
+		//////end of bottom panel
 	public Frame() throws HeadlessException {
 		
 		this.setSize(1000,700);
@@ -79,7 +84,8 @@ public class Frame extends JFrame implements ActionListener {
 		
 		menuItemW.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent b) {	
+			public void actionPerformed(ActionEvent b) {
+				
 				drawpanel.setBackground(Color.WHITE);
 			}
 		});
@@ -188,7 +194,7 @@ public class Frame extends JFrame implements ActionListener {
 		rightPanel.add(language);
 		rightPanel.add(v2);
 //////////////
-	    BottomPanel BPanel = new BottomPanel();
+	    BPanel = new BottomPanel();
 
 	    this.add(drawpanel, BorderLayout.CENTER);	    
 	    this.add(rightPanel, BorderLayout.EAST);
@@ -287,11 +293,11 @@ public class Frame extends JFrame implements ActionListener {
 				objectLabel1.setText("Obiekt");
 				nLabel.setText("Wspolczynnik zalamania n=");
 				
-				menu.setText("KOLOR T£A");
-				menuItemM.setText("MAD¯ENTA");
-				menuItemC.setText("CYJAN");
-				menuItemY.setText("JELO£");
-				menuItemW.setText("£AJT");
+				menu.setText("Kolor t³a");
+				menuItemM.setText("magenta");
+				menuItemC.setText("cyjan");
+				menuItemY.setText("¿ó³ty");
+				menuItemW.setText("bia³y");
 				
 				int indeks1= lensType.getSelectedIndex();
 				

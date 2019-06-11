@@ -32,6 +32,7 @@ public class DrawPanel extends JPanel{
 	public String pathObiekt= "trojkat.png";
 	
 	
+	
 	///// TO RYSUJE OŒ OPTYCZN¥
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -41,19 +42,20 @@ public class DrawPanel extends JPanel{
         Dimension height= this.getSize();
         g2.draw(new Line2D.Float(0,(float) (height.getHeight())/2, (float) width.getWidth(),(float) (height.getHeight())/2));
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^typ     pol wysokosci panelu,  typ  max szerokosc panelu,   znowu pol wysokosci
+        
 	}
 	//////zaznacza odleglosc ogniskowych
 	public void rysujOgniskowe(Graphics g, JTextField tekst) {
 		Graphics2D g9= (Graphics2D) g;
 		g9.setStroke(new BasicStroke(2));  //do rozmiaru
-		Dimension width=getSize();   //pobiera rozmiar drawPanelu
-        Dimension height= getSize();
+		int width=getWidth();   //pobiera rozmiar drawPanelu
+        int height= getHeight();
         String text = tekst.getText();  //pobiera tekst z jtextfield i zapisuje go w stringu
         int wartosc = Integer.parseInt(text); //przypisuje zmiennej wartosc wartosc pobrana ze stringa text
 //        for(int i=0; i<height.getHeight()/wartosc; i++)  wchodzi na RightPanel, wiec zostawiam max 4 ogniskowe
         for(int i=0; i<4; i++) {
-        	g9.draw(new Line2D.Float( (float) width.getWidth()/2-(wartosc*i), (float) (height.getHeight()/2)+80, (float) width.getWidth()/2-(wartosc*i), (float)(height.getHeight()/2)+40));
-        	g9.draw(new Line2D.Float( (float) width.getWidth()/2+(wartosc*i), (float) (height.getHeight()/2)+80, (float) width.getWidth()/2+(wartosc*i), (float)(height.getHeight()/2)+40));
+        	g9.draw(new Line2D.Float( (float) width/2-(wartosc*i), (float) (height/2)+80, (float) width/2-(wartosc*i), (float)(height/2)+40));
+        	g9.draw(new Line2D.Float( (float) width/2+(wartosc*i), (float) (height/2)+80, (float) width/2+(wartosc*i), (float)(height/2)+40));
         }//ten for rysuje pionowe kreski- ogniskowe
 	}
 	
@@ -61,8 +63,8 @@ public class DrawPanel extends JPanel{
 	public void rysujLinie(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru
-		Dimension width=getSize();   //pobiera rozmiar drawPanelu
-        Dimension height= getSize();
+		//Dimension width=getSize();   //pobiera rozmiar drawPanelu
+        //Dimension height= getSize();
         int x=100;
         int y=90;
         int endX=100;
@@ -128,7 +130,7 @@ public class DrawPanel extends JPanel{
 	//////TO RYSUJE OBIEKT: PIÊCIOK¥T
 	public void rysujPieciokat(Graphics g) {
 		Graphics2D g2 = (Graphics2D)g;
-		GeneralPath path = new GeneralPath(GeneralPath.WIND_EVEN_ODD);
+		//GeneralPath path = new GeneralPath(GeneralPath.WIND_EVEN_ODD);
 		g2.setStroke(new BasicStroke(2));
 		int width=getWidth();   //pobiera rozmiar drawPanelu
         int height= getHeight();
@@ -220,6 +222,11 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         g5.drawImage(rozpraszajaca, width/3, 55+height/4, width/2, height/2, null);
+	}
+	
+	
+	public void obrazowanieTrojkata(Graphics g) {
+		Graphics2D g6= (Graphics2D) g;//XD
 	}
 
 	public void clear() {
