@@ -37,7 +37,7 @@ public class DrawPanel extends JPanel{
 	
 	
 	
-	///// TO RYSUJE OŒ OPTYCZN¥
+	///// TO RYSUJE Oï¿½ OPTYCZNï¿½
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
@@ -137,7 +137,7 @@ public class DrawPanel extends JPanel{
 	}
 	
 	
-	//////TO RYSUJE OBIEKT: TRÓJK¥T
+	//////TO RYSUJE OBIEKT: TRï¿½JKï¿½T
 	public void rysujTrojkatF1(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru  
@@ -308,7 +308,7 @@ public class DrawPanel extends JPanel{
         g3.drawImage(kwadrat,(int) width.getWidth()/4-200,(int) height.getHeight()/2-32, 100, 100, null);
 	}
 	
-	//////TO RYSUJE OBIEKT: PIÊCIOK¥T
+	//////TO RYSUJE OBIEKT: PIï¿½CIOKï¿½T
 	public void rysujPieciokatF1(Graphics g) {
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setStroke(new BasicStroke(2));
@@ -393,7 +393,7 @@ public class DrawPanel extends JPanel{
 
         g2.drawImage(pentagon,(int) width.getWidth()/4-200,(int) height.getHeight()/2-44, 100, 100, null);	
 	}
-	//////TO RYSUJE OBIEKT: KO£O
+	//////TO RYSUJE OBIEKT: KOï¿½O
 	public void rysujKoloF1(Graphics g) {
 		Graphics2D g3 = (Graphics2D) g;
         g3.setStroke(new BasicStroke(2));  //do rozmiaru
@@ -479,7 +479,7 @@ public class DrawPanel extends JPanel{
         g3.drawImage(kolko,(int) width.getWidth()/4-200,(int) height.getWidth()/3-20, 100, 100, null);
 	}
 	
-	//////TO RYSUJE OBIEKT: SOCZEWKA WYPUK£A	
+	//////TO RYSUJE OBIEKT: SOCZEWKA WYPUKï¿½A	
 	public void rysujSoczewkeWypukla(Graphics g) {
 		Graphics2D g4 = (Graphics2D) g;
         g4.setStroke(new BasicStroke(4));  //do rozmiaru
@@ -497,7 +497,7 @@ public class DrawPanel extends JPanel{
         g4.drawImage(skupiajaca,(int) width.getWidth()/4+18,(int) height.getHeight()/3, (int) width.getWidth()/2, (int) height.getHeight()/2, null);
 	}
 	
-	//////TO RYSUJE OBIEKT: SOCZEWKA WKLÊS£A	                    vvvv  tu o zmienilem kilka wartosci, zeby krzywe byly w inna strone
+	//////TO RYSUJE OBIEKT: SOCZEWKA WKLï¿½Sï¿½A	                    vvvv  tu o zmienilem kilka wartosci, zeby krzywe byly w inna strone
 	public void rysujSoczewkeWklesla(Graphics g) {
 		Graphics2D g5 = (Graphics2D) g;
 		g5.setStroke(new BasicStroke(4));  //do grubosci kreski
@@ -549,7 +549,8 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int) width.getWidth()/4+360,(int) height.getHeight()/2-230, 100*4, 100*4, null);	
+        
+        g6.drawImage(createFlipped(linia),(int) width.getWidth()/4+360,(int) height.getHeight()/2-70, 100*4, 100*4, null);	
         System.out.println("Real and inverted, magnified, image beyond 2F on the other side of the lense");
 	}
 	
@@ -566,7 +567,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int)width.getWidth()/4+450,(int) height.getHeight()/2-20, 100, 100, null);
+        g6.drawImage(createFlipped(linia),(int)width.getWidth()/4+450,(int) height.getHeight()/2+20, 100, 100, null);
         System.out.println("Real and inverted, same size, image at 2F on the other side of the lense");
 	}
 	
@@ -583,7 +584,7 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(linia,(int)width.getWidth()/4+420,(int) height.getHeight()/2+10, 55, 55, null);
+        g6.drawImage(createFlipped(linia),(int)width.getWidth()/4+420,(int) height.getHeight()/2+30, 55, 55, null);
         System.out.println("Real and inverted, diminished, image between F and 2F on the other side of the lense");
         }
 	
@@ -1287,5 +1288,19 @@ public class DrawPanel extends JPanel{
 	public void clear() {
 		this.setBackground(Color.WHITE);
 		//to ma usuwac narysowane smieszki
+	}
+	private static BufferedImage createFlipped(BufferedImage image) {
+		AffineTransform at = new AffineTransform();
+		at.concatenate(AffineTransform.getScaleInstance(1, -1));
+		at.concatenate(AffineTransform.getTranslateInstance(0, -image.getHeight()));
+		return createTransformed(image,at);
+	}
+	private static BufferedImage createTransformed(BufferedImage image, AffineTransform at) {
+		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g = newImage.createGraphics();
+		g.transform(at);
+		g.drawImage(image, 0, 0, null);
+		g.dispose();
+		return newImage;
 	}
 }
