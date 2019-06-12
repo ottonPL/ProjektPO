@@ -1,6 +1,7 @@
 package projektInterfejs;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Main {
 
@@ -9,5 +10,6 @@ public class Main {
 		Frame frame = new Frame();
 		frame.setVisible(true);
 	    frame.setResizable(false);
+	    JOptionPane.showMessageDialog(frame, "Click 'new' before creating new image with a different lens.");
 	    }
 }

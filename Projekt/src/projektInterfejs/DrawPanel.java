@@ -586,7 +586,7 @@ public class DrawPanel extends JPanel{
 		}
         g6.drawImage(createFlipped(linia),(int)width.getWidth()/4+420,(int) height.getHeight()/2+30, 55, 55, null);
         System.out.println("Real and inverted, diminished, image between F and 2F on the other side of the lense");
-        }
+       }
 	
 	public void obrazowanieLiniiF1Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -690,22 +690,12 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int) width.getWidth()/4-320,(int) height.getHeight()/2-165, 250, 250, null);
+        System.out.println("Virtual, magnified, image behind the object");
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	public void obrazowanieTrojkataF2Cov(Graphics g) {
-		Graphics2D g6= (Graphics2D) g;
-		g6.setStroke(new BasicStroke(4));
-		
-		Dimension width=getSize();   //pobiera rozmiar drawPanelu
-        Dimension height= getSize();
-        
-        pathObiekt="trojkat.png";
-        try {
-			trojkat=ImageIO.read(new File(pathObiekt));
-		} catch(IOException e){
-			e.printStackTrace();
-		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+		System.out.println("Real and inverted, highly magnified, image in INFINITY");
 	}
 	public void obrazowanieTrojkataF3Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -720,7 +710,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(createFlipped(trojkat),(int) width.getWidth()/4+465,(int) height.getHeight()/2+29, 150, 150, null);	
+        System.out.println("Real and inverted, magnified, image beyond 2F on the other side of the lense");
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	public void obrazowanieTrojkataF4Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -735,7 +727,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(createFlipped(trojkat),(int)width.getWidth()/4+450,(int) height.getHeight()/2+35, 100, 100, null);
+        System.out.println("Real and inverted, same size, image at 2F on the other side of the lense");
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	public void obrazowanieTrojkataF5Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -750,7 +744,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(createFlipped(trojkat),(int)width.getWidth()/4+420,(int) height.getHeight()/2+41, 55, 55, null);
+        System.out.println("Real and inverted, diminished, image between F and 2F on the other side of the lense");
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
 	}
 	public void obrazowanieTrojkataF1Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -765,7 +761,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int)width.getWidth()/4+120,(int) height.getHeight()/2-10, 70, 70, null);
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieTrojkataF2Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -780,7 +778,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int)width.getWidth()/4+90,(int) height.getHeight()/2-2, 60, 60, null);
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieTrojkataF3Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -795,7 +795,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int)width.getWidth()/4+60,(int) height.getHeight()/2+3, 53, 53, null);
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieTrojkataF4Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -810,7 +812,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int)width.getWidth()/4+40,(int) height.getHeight()/2+5, 52, 52, null);
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieTrojkataF5Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -825,7 +829,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(trojkat,(int)width.getWidth()/4+35,(int) height.getHeight()/2+7, 48, 48, null);
+        //g6.drawImage(trojkat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	public void obrazowanieKwadratuF1Cov(Graphics g) {

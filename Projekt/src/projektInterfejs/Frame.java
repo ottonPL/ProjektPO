@@ -25,6 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
@@ -63,7 +64,7 @@ public class Frame extends JFrame implements ActionListener {
 		public double userinputn;
 		//end of right panel
 		public BottomPanel BPanel;
-		
+		private int i=0;
 		//bottom panel
 		
 		
@@ -73,6 +74,10 @@ public class Frame extends JFrame implements ActionListener {
 		this.setSize(1000,700);
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
+		
+		
+		
 		
 		//////////////////////////////////////////////////menu
 		menuBar= new JMenuBar();
@@ -598,6 +603,10 @@ public class Frame extends JFrame implements ActionListener {
 				objectType.addItem(lensShape[4]);
 				
 				objectType.setSelectedIndex(indeks);
+				if(i==0) {
+				JOptionPane.showMessageDialog(this, "Kliknij 'nowy' przed stworzeniem nowego obrazu z inną soczewką.");
+				i++;
+				}
 				break;
 			}
 			case "english": {
