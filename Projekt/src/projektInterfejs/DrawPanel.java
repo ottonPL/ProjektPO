@@ -841,22 +841,11 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int) width.getWidth()/4-350,(int) height.getHeight()/2-150, 250, 250, null);
+        System.out.println("Virtual, magnified, image behind the object");
 	}
 	public void obrazowanieKwadratuF2Cov(Graphics g) {
-		Graphics2D g6= (Graphics2D) g;
-		g6.setStroke(new BasicStroke(4));
-		
-		Dimension width=getSize();   //pobiera rozmiar drawPanelu
-        Dimension height= getSize();
-        
-        pathObiekt="kwadrat.png";
-        try {
-			kwadrat=ImageIO.read(new File(pathObiekt));
-		} catch(IOException e){
-			e.printStackTrace();
-		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+		 System.out.println("Real and inverted, highly magnified, image in INFINITY");
 	}
 	public void obrazowanieKwadratuF3Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -871,7 +860,8 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(createFlipped(kwadrat),(int) width.getWidth()/4+470,(int) height.getHeight()/2+19, 160, 160, null);
+        System.out.println("Real and inverted, magnified, image beyond 2F on the other side of the lense");
 	}
 	public void obrazowanieKwadratuF4Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -886,7 +876,8 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(createFlipped(kwadrat),(int) width.getWidth()/4+450,(int) height.getHeight()/2+28, 100, 100, null);
+        System.out.println("Real and inverted, same size, image at 2F on the other side of the lense");
 	}
 	public void obrazowanieKwadratuF5Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -901,7 +892,8 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int) width.getWidth()/4+420,(int) height.getHeight()/2+37, 55, 55, null);
+        System.out.println("Real and inverted, diminished, image between F and 2F on the other side of the lense");
 	}
 	public void obrazowanieKwadratuF1Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -916,7 +908,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int)width.getWidth()/4+120,(int) height.getHeight()/2-6, 70, 70, null);
+        //g6.drawImage(kwadrat,(int) width.getWidth()/4+125,(int) height.getHeight()/2, 60, 60, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieKwadratuF2Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -931,7 +925,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int)width.getWidth()/4+90,(int) height.getHeight()/2, 60, 60, null);
+        //g6.drawImage(kwadrat,(int) width.getWidth()/4+125,(int) height.getHeight()/2, 60, 60, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieKwadratuF3Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -946,7 +942,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int)width.getWidth()/4+60,(int) height.getHeight()/2+6, 55, 55, null);
+        //g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieKwadratuF4Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -961,7 +959,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int)width.getWidth()/4+38,(int) height.getHeight()/2+6, 54, 54, null);
+        //g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	public void obrazowanieKwadratuF5Div(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
@@ -976,7 +976,9 @@ public class DrawPanel extends JPanel{
 		} catch(IOException e){
 			e.printStackTrace();
 		}
-        g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        g6.drawImage(kwadrat,(int)width.getWidth()/4+38,(int) height.getHeight()/2+7, 51, 51, null);
+        //g6.drawImage(kwadrat,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
+        System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1289,6 +1291,7 @@ public class DrawPanel extends JPanel{
 		this.setBackground(Color.WHITE);
 		//to ma usuwac narysowane smieszki
 	}
+	//////////////////////////////////////////////////////////////////////////////OBRACANIE OBRAZU
 	private static BufferedImage createFlipped(BufferedImage image) {
 		AffineTransform at = new AffineTransform();
 		at.concatenate(AffineTransform.getScaleInstance(1, -1));
