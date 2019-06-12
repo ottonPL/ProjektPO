@@ -5,17 +5,13 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics2D;
-import java.awt.GraphicsConfiguration;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
-
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -27,7 +23,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
@@ -35,6 +30,10 @@ import javax.swing.filechooser.FileSystemView;
 
 public class Frame extends JFrame implements ActionListener {
 		
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 		private JMenuBar menuBar;
 		private JMenu menu;
 		private JMenuItem menuItemW;
@@ -47,10 +46,8 @@ public class Frame extends JFrame implements ActionListener {
 		private JPanel rightPanel;
 		private JLabel lensLabel;
 		private String[] lenses= {"converging", "diverging"};
-		private String[] lensShape= {"line", "triangle", "square", "pentagon", "oval"};
+		private String[] lensShape= {"line", "triangle", "square", /*"pentagon", "oval"*/};
 		private JComboBox<String> lensType;
-		private JLabel nLabel;
-		private JTextField nTextField;
 		private JComboBox<String> objectType;
 		private JButton add;
 		private JTextField focalTextField;
@@ -59,9 +56,6 @@ public class Frame extends JFrame implements ActionListener {
 		public int figura=1;
 		public int soczewka=1;
 		public static int focalLength=2;
-		public int userinputf;
-		public double nval=1.5;
-		public double userinputn;
 		//end of right panel
 		public BottomPanel BPanel;
 		private int i=0;
@@ -74,11 +68,7 @@ public class Frame extends JFrame implements ActionListener {
 		this.setSize(1000,700);
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		
-		
-		
-		
-		
+
 		//////////////////////////////////////////////////menu
 		menuBar= new JMenuBar();
 		menu= new JMenu("Background color");
@@ -122,7 +112,6 @@ public class Frame extends JFrame implements ActionListener {
 		menuBar.add(menu);
 		this.setJMenuBar(menuBar);
 		////////////////////////////////////////////////////end of menu
-//////////////
 		//right
 		rightPanel= new JPanel();
 		rightPanel.setLayout(new GridLayout(8,1));  
@@ -136,11 +125,6 @@ public class Frame extends JFrame implements ActionListener {
 
 		JPanel v1= new JPanel();
 		v1.setLayout(new FlowLayout());
-				
-		nLabel= new JLabel("Refractive index n=");
-		nTextField= new JTextField("1,5");
-		nTextField.addActionListener(this);
-		nTextField.setActionCommand("nvalue");
 				
 		focalTextField= new JTextField("150");
 		focalTextField.addActionListener(this);
@@ -189,8 +173,6 @@ public class Frame extends JFrame implements ActionListener {
 						
 		rightPanel.add(lensLabel);
 		rightPanel.add(lensType);
-		v1.add(nLabel);
-		v1.add(nTextField);
 		rightPanel.add(v1);
 		rightPanel.add(objectLabel1);
 		rightPanel.add(objectType);
@@ -223,13 +205,13 @@ public class Frame extends JFrame implements ActionListener {
 				}else if(objectType.getSelectedIndex()==2) {
 					figura=3;
 					break;
-				}else if(objectType.getSelectedIndex()==3) {
+				}/*else if(objectType.getSelectedIndex()==3) {
 					figura=4;
 					break;
 				}else if(objectType.getSelectedIndex()==4) {
 					figura=5;
 					break;
-				}
+				}*/
 			}
 			case "lenstype":{
 				if(lensType.getSelectedIndex()==0) {
@@ -326,7 +308,7 @@ public class Frame extends JFrame implements ActionListener {
 							drawpanel.obrazowanieKwadratuF5Cov(getGraphics());
 						}
 						
-					}else if(figura==4) {
+					}/*else if(figura==4) {
 						if(focalLength==1) {
 							drawpanel.rysujSoczewkeWypukla(getGraphics());
 							drawpanel.rysujPieciokatF1(getGraphics());
@@ -381,7 +363,7 @@ public class Frame extends JFrame implements ActionListener {
 							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 							drawpanel.obrazowanieKolaF5Cov(getGraphics());
 						}
-					}
+					}*/
 					break;
 				}else if (soczewka==2) {
 					if(figura==1) {
@@ -468,7 +450,7 @@ public class Frame extends JFrame implements ActionListener {
 							drawpanel.obrazowanieKwadratuF5Div(getGraphics());
 						}
 						
-					}else if(figura==4) {
+					}/*else if(figura==4) {
 						if(focalLength==1) {
 							drawpanel.rysujSoczewkeWklesla(getGraphics());
 							drawpanel.rysujPieciokatF1(getGraphics());
@@ -523,33 +505,13 @@ public class Frame extends JFrame implements ActionListener {
 							drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 							drawpanel.obrazowanieKolaF5Div(getGraphics());
 						}
-					/*if(figura==1) {
-						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujLinieF1(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-					}else if(figura==2) {
-						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujTrojkat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-					}else if(figura==3) {
-						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujKwadrat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-					}else if(figura==4) {
-						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujPieciokat(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
-					}else if(figura==5) {
-						drawpanel.rysujSoczewkeWklesla(getGraphics());
-						drawpanel.rysujKolo(getGraphics());
-						drawpanel.rysujOgniskowe(getGraphics(),focalTextField);
 					}*/
 					break;
 					}
-					
+					break;
 				}
-				break;
-			}
+				
+			
 			case "polski": {
 				lensLabel.setText("Soczewka");
 				polskiButton.setText("polski");
@@ -560,7 +522,6 @@ public class Frame extends JFrame implements ActionListener {
 				focalLabel.setText("Ogniskowa:");
 				add.setText("Dodaj");
 				objectLabel1.setText("Obiekt");
-				nLabel.setText("Wspolczynnik zalamania n=");
 				
 				menu.setText("Kolor tla");
 				menuItemM.setText("magenta");
@@ -582,8 +543,8 @@ public class Frame extends JFrame implements ActionListener {
 				lensShape[0]="linia";
 				lensShape[1]="trojkat";
 				lensShape[2]="kwadrat";
-				lensShape[3]="pieciokat";
-				lensShape[4]="kolo";
+				//lensShape[3]="pieciokat";
+				//lensShape[4]="kolo";
 				
 				int indeks= objectType.getSelectedIndex();
 				
@@ -595,13 +556,13 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[2]);
-				
+				/*
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[3]);
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
-				
+				*/
 				objectType.setSelectedIndex(indeks);
 				if(i==0) {
 				JOptionPane.showMessageDialog(this, "Kliknij 'nowy' przed stworzeniem nowego obrazu z inną soczewką.");
@@ -619,7 +580,6 @@ public class Frame extends JFrame implements ActionListener {
 				focalLabel.setText("Focal length:");
 				add.setText("Add");
 				objectLabel1.setText("Object");
-				nLabel.setText("Refractive index n=");
 				
 				menu.setText("Background color");
 				menuItemM.setText("Magenta");
@@ -643,8 +603,8 @@ public class Frame extends JFrame implements ActionListener {
 				lensShape[0]="line";
 				lensShape[1]="triangle";
 				lensShape[2]="square";
-				lensShape[3]="pentagon";
-				lensShape[4]="oval";
+				//lensShape[3]="pentagon";
+				//lensShape[4]="oval";
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[0]);
 				
@@ -653,29 +613,17 @@ public class Frame extends JFrame implements ActionListener {
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[2]);
-				
+				/*
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[3]);
 				
 				objectType.removeItemAt(0);
 				objectType.addItem(lensShape[4]);
-				
+				*/
 				objectType.setSelectedIndex(indeks4);
 				break;
 			}
 			
-			/*case "focalvalue":{
-				Scanner userinputf = new Scanner(System.in);
-				focalval=this.userinputf;
-				//repaint();
-				break;
-			}*/
-			/*case "nvalue":{
-				Scanner userinputn = new Scanner(System.in);
-				nval=this.userinputn;
-				//repaint();
-				break;
-			}*/
 			case "save":{
 				BufferedImage image = new BufferedImage(drawpanel.getWidth(), drawpanel.getHeight(),BufferedImage.TYPE_INT_ARGB);
 	            Graphics2D g2d = image.createGraphics();

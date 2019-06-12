@@ -1,41 +1,26 @@
 package projektInterfejs;
 
 import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-//import java.awt.Point;
-import java.awt.Polygon;
-//import java.awt.Shape;
 import java.awt.geom.AffineTransform;
-//import java.awt.geom.CubicCurve2D;
-//import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
-//import java.awt.geom.Point2D;
-//import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-
 public class DrawPanel extends JPanel{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private static BufferedImage skupiajaca, rozpraszajaca;
-	private static BufferedImage linia, kolko, kwadrat, pentagon, trojkat;
+	private static BufferedImage linia, trojkat, kwadrat ;//pentagon,kolko;
 	
 	public String pathSoczewka="skupiajaca.png";
 	public String pathObiekt= "trojkat.png";
-	
-	
 	
 	///// TO RYSUJE O� OPTYCZN�
 	public void paintComponent(Graphics g) {
@@ -309,7 +294,7 @@ public class DrawPanel extends JPanel{
 	}
 	
 	//////TO RYSUJE OBIEKT: PI�CIOK�T
-	public void rysujPieciokatF1(Graphics g) {
+	/*public void rysujPieciokatF1(Graphics g) {
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setStroke(new BasicStroke(2));
 		
@@ -478,7 +463,7 @@ public class DrawPanel extends JPanel{
     
         g3.drawImage(kolko,(int) width.getWidth()/4-200,(int) height.getWidth()/3-20, 100, 100, null);
 	}
-	
+	*/
 	//////TO RYSUJE OBIEKT: SOCZEWKA WYPUK�A	
 	public void rysujSoczewkeWypukla(Graphics g) {
 		Graphics2D g4 = (Graphics2D) g;
@@ -514,7 +499,8 @@ public class DrawPanel extends JPanel{
 		}
 		g5.drawImage(rozpraszajaca,(int) width.getWidth()/4+8,(int) height.getHeight()/3, (int) width.getWidth()/2, (int) height.getHeight()/2, null);
 	}
-	
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//OBRAZOWANIE LINII
 	public void obrazowanieLiniiF1Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
@@ -677,6 +663,7 @@ public class DrawPanel extends JPanel{
         System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
         }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	//OBRAZOWANIE TROJKAT
 	public void obrazowanieTrojkataF1Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
@@ -834,6 +821,7 @@ public class DrawPanel extends JPanel{
         System.out.println("Virtual and upright, diminished, image between object and lense on the same side as the object");
 	}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	//OBRAZOWANIE KWADRAT
 	public void obrazowanieKwadratuF1Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
@@ -988,7 +976,7 @@ public class DrawPanel extends JPanel{
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public void obrazowaniePieciokataF1Cov(Graphics g) {
+	/*public void obrazowaniePieciokataF1Cov(Graphics g) {
 		Graphics2D g6= (Graphics2D) g;
 		g6.setStroke(new BasicStroke(4));
 		
@@ -1291,13 +1279,10 @@ public class DrawPanel extends JPanel{
 			e.printStackTrace();
 		}
         g6.drawImage(kolko,(int) width.getWidth()/4,(int) height.getHeight()/2-36, 100, 100, null);
-	}
+	}*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public void clear() {
-		this.setBackground(Color.WHITE);
-		//to ma usuwac narysowane smieszki
-	}
-	//////////////////////////////////////////////////////////////////////////////OBRACANIE OBRAZU
+	
+/////////OBRACANIE OBRAZU
 	private static BufferedImage createFlipped(BufferedImage image) {
 		AffineTransform at = new AffineTransform();
 		at.concatenate(AffineTransform.getScaleInstance(1, -1));
